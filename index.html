@@ -3,463 +3,427 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Eleni Grigoriou</title>
-<meta name="description" content="Eleni Grigoriou, Senior Director of Product Management based in Geneva. Product strategy, UX and enterprise delivery.">
+<title>Eleni Grigoriou · Senior Director of Product Management, Geneva</title>
+<meta name="description" content="Eleni Grigoriou, product leader based in Geneva, Switzerland. 6+ years in product management, UX and engineering for B2B healthcare software. English C2, German B1.">
 <meta name="color-scheme" content="light">
-<meta property="og:title" content="Eleni Grigoriou">
-<meta property="og:description" content="Senior Director of Product Management · Product strategy, UX and enterprise delivery">
-<meta property="og:image" content="photo.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='18' fill='%231b2a2f'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%23e9f1ee'>eg</text></svg>">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Eleni Grigoriou · Product Leader, Geneva">
+<meta property="og:description" content="Senior Director of Product Management. 6+ years in product, UX and engineering.">
+<meta property="og:image" content="https://grigeleni.github.io/photo.jpg">
+<meta property="og:url" content="https://grigeleni.github.io/">
+<link rel="canonical" href="https://grigeleni.github.io/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Eleni Grigoriou","jobTitle":"Senior Director of Product Management","url":"https://grigeleni.github.io/","image":"https://grigeleni.github.io/photo.jpg","address":{"@type":"PostalAddress","addressLocality":"Geneva","addressCountry":"CH"},"alumniOf":"University of Crete","knowsLanguage":["Greek","English","German","French"],"sameAs":["https://www.linkedin.com/in/elenigrigoriou98"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#f3f2ee; --tile:#ffffff; --ink:#1b2a2f; --ink-2:#44525a; --muted:#7a868c; --line:#e3e2dc;
-  --teal:#0f6e66; --teal-soft:#e2efec; --sand:#efe6d8; --lilac:#e7e4f3; --dark:#1b2a2f;
-  --r:26px;
+  --text:#1c2430;--muted:#5d6878;--line:#e4e8ee;--soft:#f5f7fa;--bg:#ffffff;
+  --accent:#1f4e79;--accent-soft:#eaf1f8;--radius:12px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Manrope,system-ui,-apple-system,sans-serif;overflow-x:clip}
-a{color:inherit}
-.f{font-family:Manrope,sans-serif;font-weight:700;letter-spacing:-.02em}
-.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:15.5px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
 
-/* top bar */
-.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
-.mono{display:flex;align-items:center;gap:10px;font-weight:600;text-decoration:none}
-.mono b{width:34px;height:34px;border-radius:10px;background:var(--ink);color:#e9f1ee;display:grid;place-items:center;font:700 15px Manrope,sans-serif}
-.dock{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:50;display:flex;gap:2px;padding:6px;background:rgba(27,42,47,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:999px;box-shadow:0 12px 30px -10px rgba(0,0,0,.35)}
-.dock a{color:#c4d0cd;text-decoration:none;font-size:.86rem;font-weight:500;padding:8px 14px;border-radius:999px;transition:all .2s;white-space:nowrap}
-.dock a:hover{color:#fff}
-.dock a.active{background:#e9f1ee;color:var(--ink)}
-.status{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--ink-2)}
-.status i{width:8px;height:8px;border-radius:50%;background:#2fa37a;box-shadow:0 0 0 4px rgba(47,163,122,.18)}
+/* sticky bar appears after header */
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .25s ease}
+.bar.show{transform:none}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
+.bar .me{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--text)}
+.bar .me img{width:30px;height:30px;border-radius:50%;object-fit:cover}
+.bar nav{display:flex;gap:2px}
+.bar nav a{color:var(--muted);font-size:.9rem;padding:6px 10px;border-radius:8px}
+.bar nav a:hover{text-decoration:none;color:var(--text);background:var(--soft)}
+.bar nav a.on{color:var(--accent);background:var(--accent-soft)}
 
-/* bento */
-.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(150px,auto);gap:14px;padding-bottom:20px}
-.t{background:var(--tile);border:1px solid var(--line);border-radius:var(--r);padding:26px;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
-.t.hov:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(27,42,47,.35)}
-.lbl{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:600;margin-bottom:10px}
-.intro{grid-column:span 4;display:flex;flex-direction:column;justify-content:space-between;background:var(--tile);padding:40px}
-.who{display:flex;align-items:center;gap:16px;margin-bottom:18px}
-.who img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--paper);box-shadow:0 0 0 1px var(--line)}
-.who b{display:block;font-size:1.05rem}
-.who span{color:var(--muted);font-size:.9rem}
-.intro h1{font-family:Manrope,sans-serif;font-weight:700;font-size:clamp(2.3rem,5vw,4.2rem);line-height:1.05;letter-spacing:-.04em;margin:8px 0 18px}
-.intro h1 em{color:var(--teal);font-style:normal}
-.intro p{font-size:1.12rem;color:var(--ink-2);max-width:620px;margin:0 0 24px}
-.actions{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;gap:8px;font:600 .93rem Manrope,sans-serif;padding:12px 20px;border-radius:14px;border:1px solid var(--line);background:var(--paper);color:var(--ink);text-decoration:none;cursor:pointer;transition:all .2s}
-.btn:hover{border-color:var(--ink)}
-.btn.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
-.btn.dark:hover{background:var(--teal);border-color:var(--teal)}
-.btn svg{width:16px;height:16px}
-.photo{grid-row:span 2;padding:0;background:var(--sand)}
-.photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92) contrast(1.02);transition:transform .8s}
-.photo:hover img{transform:scale(1.04)}
-.photo .cap{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border-radius:16px;padding:10px 14px;font-size:.85rem}
-.photo .cap b{display:block;font-size:.92rem}
-.num{font-family:Manrope,sans-serif;font-weight:700;font-size:3rem;line-height:1;letter-spacing:-.03em}
-.num small{font-size:1.4rem;color:var(--teal)}
-.t p.s{margin:8px 0 0;color:var(--ink-2);font-size:.9rem}
-.now{background:var(--dark);color:#e9f1ee;border-color:var(--dark);grid-column:span 2}
-.now .lbl{color:#8fb3ab}
-.now h3{font-family:Manrope,sans-serif;font-weight:700;font-size:1.55rem;margin:0 0 4px;letter-spacing:-.02em}
-.now p{margin:0;color:#b6c6c2;font-size:.93rem}
-.now .ring{position:absolute;right:-50px;bottom:-50px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(233,241,238,.15)}
-.now .ring::after{content:"";position:absolute;inset:26px;border-radius:50%;border:1px solid rgba(233,241,238,.12)}
-.geo{background:var(--teal-soft);border-color:#cfe3de;grid-column:span 2}
-.eduT{grid-column:span 4}
-.geo .clock{font-family:Manrope,sans-serif;font-weight:700;font-size:2.4rem;letter-spacing:-.02em;line-height:1}
-.lang{background:var(--lilac);border-color:#d8d3ec;grid-column:span 2}
-.lang ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.lang li{display:flex;justify-content:space-between;align-items:baseline;font-weight:600;font-size:.95rem}
-.lang li small{display:block;font-weight:500;font-size:.74rem;color:var(--ink-2);line-height:1.3}
-.lang li span{font-weight:500;color:var(--ink-2);font-size:.82rem}
+/* header */
+header{padding:64px 0 28px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+header img{width:132px;height:132px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 5px var(--accent-soft)}
+h1{font-size:2.3rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;margin:0}
+.role{font-size:1.1rem;color:var(--muted);margin:4px 0 14px}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;gap:7px;font:500 .9rem Inter,sans-serif;padding:9px 15px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--text);cursor:pointer;transition:border-color .15s,background .15s}
+.btn:hover{text-decoration:none;border-color:#c4ccd7;background:var(--soft)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:#173d60}
+.btn svg{width:16px;height:16px;flex:none}
+
+header{grid-template-columns:auto 1fr 230px}
+.mesh{position:relative;width:230px;height:230px;justify-self:end}
+.mesh canvas{width:100%;height:100%;display:block}
+.mesh figcaption{position:absolute;left:0;right:0;bottom:-4px;text-align:center;font-size:.72rem;color:var(--muted);letter-spacing:.02em}
+.mesh figcaption b{color:var(--accent);font-weight:600}
+
+/* focus areas */
+.focus{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.focus div{padding:16px;border-radius:var(--radius);background:var(--soft);border:1px solid var(--line)}
+.focus svg{width:26px;height:26px;color:var(--accent);margin-bottom:8px}
+.focus b{display:block;font-size:.98rem;margin-bottom:2px}
+.focus span{font-size:.88rem;color:var(--muted);line-height:1.5;display:block}
+
+/* key facts */
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 0;padding:0;list-style:none}
+.facts li{display:flex;align-items:center;gap:7px;font-size:.88rem;padding:6px 12px;border-radius:999px;background:var(--soft);border:1px solid var(--line)}
+.facts svg{width:15px;height:15px;color:var(--accent)}
+
+.summary{font-size:1.06rem;margin:26px 0 0;color:#2d3746}
 
 /* sections */
-section{padding:84px 0 0;scroll-margin-top:20px}
-.head{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end;margin-bottom:30px}
-.head h2{font-family:Manrope,sans-serif;font-weight:700;font-size:clamp(2.2rem,4.4vw,3.4rem);letter-spacing:-.035em;line-height:1;margin:0}
-.head h2 em{color:var(--teal);font-style:normal}
-.head p{margin:0;color:var(--ink-2);justify-self:end;max-width:380px;text-align:right}
-.idx{font:600 .78rem Manrope;color:var(--teal);letter-spacing:.1em;display:block;margin-bottom:10px}
+section{padding-top:44px;scroll-margin-top:64px}
+h2{font-size:1.25rem;font-weight:700;letter-spacing:-.01em;margin:0 0 18px;display:flex;align-items:center;gap:10px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
 
-/* about */
-.about{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
-.about .t p{margin:0;font-weight:500;font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.45;letter-spacing:-.01em}
-.focus{display:grid;gap:10px}
-.focus div{display:flex;gap:14px;align-items:flex-start}
-.focus b{font-family:Manrope,sans-serif;font-weight:700;font-size:1.3rem;color:var(--teal);line-height:1.2;min-width:28px}
-.focus span{font-size:.95rem;color:var(--ink-2)}
-.focus strong{display:block;color:var(--ink)}
+/* highlights */
+.hl{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.hl div{padding:18px 18px 16px;border:1px solid var(--line);border-radius:var(--radius);transition:border-color .2s,box-shadow .2s}
+.hl div:hover{border-color:#c9d6e4;box-shadow:0 6px 18px -12px rgba(31,78,121,.4)}
+.hl b{display:block;font-size:1rem;margin-bottom:3px}
+.hl span{color:var(--muted);font-size:.93rem}
 
-/* experience tabs */
-.xp{display:grid;grid-template-columns:330px 1fr;gap:14px;align-items:start}
-.tabs{display:flex;flex-direction:column;gap:6px;padding:10px}
-.tabs button{all:unset;box-sizing:border-box;cursor:pointer;padding:14px 16px;border-radius:16px;transition:background .2s;display:grid;gap:2px}
-.tabs button:hover{background:var(--paper)}
-.tabs button.on{background:var(--ink);color:#fff}
-.tabs button:focus-visible{outline:2px solid var(--teal)}
-.tabs .tt{font-weight:600;font-size:.94rem;line-height:1.3}
-.tabs .td{font-size:.8rem;color:var(--muted)}
-.tabs button.on .td{color:#9fb5b0}
-.panel{padding:34px;min-height:100%}
-.panel .when{display:inline-block;font-size:.82rem;font-weight:600;background:var(--teal-soft);color:var(--teal);padding:5px 12px;border-radius:999px}
-.panel h3{font-family:Manrope,sans-serif;font-weight:700;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-.025em;line-height:1.1;margin:16px 0 6px}
-.panel .org{color:var(--ink-2);margin:0 0 22px}
-.panel ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.panel li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:var(--ink-2)}
-.panel li::before{content:"";width:8px;height:8px;margin-top:9px;border-radius:2px;background:var(--teal);transform:rotate(45deg)}
-.panel .anim{animation:in .45s cubic-bezier(.2,.8,.2,1)}
-@keyframes in{from{opacity:0;transform:translateY(10px)}}
-.progress{display:flex;gap:4px;margin-top:28px}
-.progress i{flex:1;height:4px;border-radius:4px;background:var(--line);transition:background .3s}
-.progress i.on{background:var(--teal)}
+/* experience */
+.company{margin-bottom:26px}
+.chead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.chead h3{margin:0;font-size:1.08rem}
+.chead span{color:var(--muted);font-size:.9rem}
+.cnote{color:var(--muted);font-size:.92rem;margin:-6px 0 12px}
+.steps{position:relative;margin-left:6px;padding-left:22px;border-left:2px solid var(--line)}
+details.job{position:relative;margin-bottom:6px}
+details.job::before{content:"";position:absolute;left:-29px;top:15px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid #b8c4d2}
+details.job.cur::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+details.job summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 12px;margin-left:-12px;border-radius:9px;transition:background .15s}
+details.job summary::-webkit-details-marker{display:none}
+details.job summary:hover{background:var(--soft)}
+details.job summary:focus-visible{outline:2px solid var(--accent)}
+.jt{font-weight:600}
+.jt small{font-weight:500;color:var(--muted);margin-left:6px}
+.jd{color:var(--muted);font-size:.88rem;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.jd i{display:inline-block;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+details[open] .jd i{transform:rotate(-135deg) translateY(-1px)}
+details.job ul{margin:2px 0 12px;padding-left:18px;color:#2d3746}
+details.job li{margin-bottom:4px}
+.pill{display:inline-block;font-size:.72rem;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:1px 8px;border-radius:999px;margin-left:8px;vertical-align:2px}
 
-/* education + pubs */
-.edu{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.edu .yr{font-family:Manrope,sans-serif;font-weight:700;font-size:1.1rem;color:var(--teal)}
-.edu h3{font-family:Manrope,sans-serif;font-weight:700;font-size:1.45rem;letter-spacing:-.02em;margin:6px 0 4px;line-height:1.2}
-.edu p{margin:0;color:var(--ink-2);font-size:.94rem}
-.edu .th{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
-.chip{display:inline-block;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--teal-soft);color:var(--teal);margin-top:10px}
-.pubs{border-top:1px solid var(--ink)}
-.pub{display:grid;grid-template-columns:90px 1fr 44px;gap:20px;align-items:center;padding:26px 6px;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .3s,background .3s}
-.pub:hover{background:var(--tile);padding-left:18px;padding-right:18px}
-.pub .y{font-family:Manrope,sans-serif;font-weight:700;font-size:1.6rem;color:var(--muted)}
-.pub h3{font-family:Manrope,sans-serif;font-weight:700;font-size:1.3rem;line-height:1.3;margin:0 0 6px;letter-spacing:-.01em}
-.pub p{margin:0;color:var(--ink-2);font-size:.88rem}
-.pub .go{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:all .3s}
-.pub:hover .go{background:var(--ink);color:#fff;border-color:var(--ink);transform:rotate(-45deg)}
+/* education, pubs */
+.item{display:flex;justify-content:space-between;gap:16px;margin-bottom:16px}
+.item h3{margin:0;font-size:1rem}
+.item p{margin:2px 0 0;color:var(--muted);font-size:.93rem}
+.item .d{color:var(--muted);font-size:.9rem;white-space:nowrap}
+.pub{display:block;padding:12px 14px;margin:0 -14px 4px;border-radius:10px;color:var(--text);transition:background .15s}
+.pub:hover{text-decoration:none;background:var(--soft)}
+.pub b{font-weight:600;display:block}
+.pub span{color:var(--muted);font-size:.9rem}
+.pub em{font-style:normal;color:var(--accent);font-size:.85rem;font-weight:500}
 
 /* skills */
-.seg{display:inline-flex;flex-wrap:wrap;gap:4px;padding:5px;background:var(--tile);border:1px solid var(--line);border-radius:16px;margin-bottom:18px}
-.seg button{all:unset;cursor:pointer;padding:9px 16px;border-radius:12px;font-weight:600;font-size:.88rem;color:var(--ink-2);transition:all .2s}
-.seg button.on{background:var(--ink);color:#fff}
-.seg button:focus-visible{outline:2px solid var(--teal)}
-.sk{columns:3 300px;column-gap:14px}
-.sk .t{break-inside:avoid;margin-bottom:14px;animation:in .4s both}
-.sk h3{font-family:Manrope,sans-serif;font-weight:700;font-size:1.25rem;margin:0 0 12px;letter-spacing:-.01em}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tags span{font-size:.83rem;padding:5px 11px;border-radius:10px;background:var(--paper);transition:all .2s}
-.tags span:hover{background:var(--ink);color:#fff}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tabs button{font:500 .88rem Inter,sans-serif;padding:7px 13px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
+.tabs button:hover{color:var(--text)}
+.tabs button[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tags{display:flex;flex-wrap:wrap;gap:6px;min-height:40px}
+.tags span{font-size:.88rem;padding:5px 11px;border-radius:7px;background:var(--soft);border:1px solid var(--line)}
+
+/* languages */
+.langs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.lang{padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius)}
+.lang .top{display:flex;justify-content:space-between;align-items:baseline}
+.lang b{font-size:1rem}
+.lang .lvl{font-size:.85rem;font-weight:600;color:var(--accent)}
+.lang p{margin:2px 0 10px;color:var(--muted);font-size:.88rem}
+.cefr{display:grid;grid-template-columns:repeat(6,1fr);gap:3px}
+.cefr i{height:5px;border-radius:3px;background:var(--line)}
+.cefr i.f{background:var(--accent)}
 
 /* contact */
-.cta{margin:90px 0 120px;display:grid;grid-template-columns:1.3fr 1fr;gap:14px}
-.cta .big{background:var(--dark);color:#e9f1ee;border-color:var(--dark);padding:44px}
-.cta .big h2{font-family:Manrope,sans-serif;font-weight:700;font-size:clamp(2.2rem,4.6vw,3.6rem);letter-spacing:-.035em;line-height:1.02;margin:0 0 16px}
-.cta .big h2 em{color:#8fd1c3;font-style:normal}
-.cta .big p{color:#b6c6c2;margin:0 0 26px;max-width:440px}
-.cta .big .btn{background:#e9f1ee;color:var(--ink);border-color:#e9f1ee}
-.cta .big .btn:hover{background:#8fd1c3;border-color:#8fd1c3}
-.cta .big .btn.ghost{background:transparent;color:#e9f1ee;border-color:rgba(233,241,238,.3)}
-.links{display:grid;gap:14px}
-.links a{display:flex;justify-content:space-between;align-items:center;text-decoration:none}
-.links a .lbl{margin:0 0 4px}
-.links a b{font-weight:600;word-break:break-all}
-footer{text-align:center;color:var(--muted);font-size:.84rem;padding-bottom:100px;margin-top:-80px}
+.contact{margin:52px 0 30px;padding:30px;border-radius:16px;background:var(--accent);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.contact h2{color:#fff;margin:0 0 4px}
+.contact h2::after{display:none}
+.contact p{margin:0;color:#cfdced}
+.contact .btn{background:#fff;color:var(--accent);border-color:#fff}
+.contact .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.contact .btn.ghost:hover{background:rgba(255,255,255,.1)}
+footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
 
-#toast{position:fixed;left:50%;top:22px;transform:translate(-50%,-20px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:12px;font-size:.9rem;opacity:0;pointer-events:none;transition:all .3s;z-index:70}
+#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,16px);background:var(--text);color:#fff;padding:9px 16px;border-radius:9px;font-size:.9rem;opacity:0;pointer-events:none;transition:all .25s;z-index:30}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 
-.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
-.rv.in{opacity:1;transform:none}
-
-@media (max-width:980px){
-  .bento{grid-template-columns:repeat(2,1fr)}
-  .intro{grid-column:span 2}
-  .now,.eduT{grid-column:span 2}
-  .geo,.lang{grid-column:span 1}
-  .about,.xp,.edu,.cta{grid-template-columns:1fr}
-  .tabs{flex-direction:row;overflow-x:auto;scrollbar-width:none}
-  .tabs button{flex:0 0 auto;max-width:230px}
-}
-@media (max-width:600px){
+@media (max-width:640px){
   .wrap{padding:0 16px}
-  .bento{grid-template-columns:1fr 1fr;gap:10px}
-  .t{padding:20px}
-  .intro{padding:24px}
-  .head{grid-template-columns:1fr}
-  .head p{justify-self:start;text-align:left}
-  .pub{grid-template-columns:1fr 40px}
-  .pub .y{display:none}
-  .panel,.cta .big{padding:26px}
-  .num{font-size:2.4rem}
-  .geo,.lang{grid-column:span 2}
-  .geo .clock{font-size:2rem}
-  .dock a{padding:8px 10px;font-size:.8rem}
-  .dock a.hide-sm{display:none}
-  .status span{display:none}
+  header{grid-template-columns:1fr;gap:18px;padding-top:40px;position:relative}
+  .mesh{position:absolute;top:24px;right:-10px;width:150px;height:150px;opacity:.75}
+  .mesh figcaption{display:none}
+  .focus{grid-template-columns:1fr}
+  header img{width:104px;height:104px}
+  h1{font-size:1.9rem}
+  .hl,.langs{grid-template-columns:1fr}
+  .bar nav{display:none}
+  details.job summary{flex-direction:column;gap:0}
+  .chead,.item{flex-direction:column;gap:0}
+  .contact{padding:24px}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 @media print{
-  .dock,.actions,.seg,#toast,.cta .btn{display:none!important}
-  .rv{opacity:1;transform:none}
-  body{background:#fff}
-  section{padding-top:28px;break-inside:avoid}
+  .mesh,.bar,.btns,.tabs,.contact .btn,#toast{display:none!important}
+  details.job>ul{display:block}
+  section{padding-top:20px;break-inside:avoid}
 }
 </style>
 </head>
 <body>
-<div class="wrap" id="top">
 
-  <div class="top">
-    <a class="mono" href="#top"><b>eg</b>Eleni Grigoriou</a>
-    <div class="status"><i></i><span>Open to conversations</span></div>
+<div class="bar" id="bar">
+  <div class="wrap">
+    <a class="me" href="#top"><img src="photo.jpg" alt="">Eleni Grigoriou</a>
+    <nav>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#languages">Languages</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-
-  <div class="bento">
-    <div class="t intro">
-      <div>
-        <div class="who"><img src="photo.jpg" alt="Portrait of Eleni Grigoriou" width="64" height="64"><div><b>Eleni Grigoriou</b><span>Senior Director of Product Management · Geneva</span></div></div>
-        <h1>I turn complex technology into <em>products people love</em> to use.</h1>
-        <p>Product leader with 6+ years taking B2B products from strategy to launch, across product management, UX, engineering and enterprise delivery. Most recently in healthcare training technology.</p>
-      </div>
-      <div class="actions">
-        <a class="btn dark" href="#contact">Get in touch
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        <a class="btn" href="#experience">See my work</a>
-      </div>
-    </div>
-
-    <div class="t now hov rv">
-      <div class="ring"></div>
-      <div class="lbl">Currently</div>
-      <h3>Senior Director of Product Management</h3>
-      <p>Leading product strategy, teams and enterprise delivery · since Jan 2026</p>
-    </div>
-
-    <div class="t hov rv">
-      <div class="num"><span data-count="6">0</span><small>+</small></div>
-      <p class="s">years in product, UX and engineering</p>
-    </div>
-
-    <div class="t hov rv">
-      <div class="num" data-count="41">0</div>
-      <p class="s">citations on MAGES 4.0, IEEE CG&amp;A</p>
-    </div>
-
-    <div class="t geo hov rv">
-      <div class="lbl">Based in Geneva</div>
-      <div class="clock" id="clock">--:--</div>
-      <p class="s">local time, Switzerland</p>
-    </div>
-
-    <div class="t lang hov rv">
-      <div class="lbl">Languages</div>
-      <ul>
-        <li>Greek <span>Native</span></li>
-        <li>English <span>C2</span></li>
-        <li><div>German<small>Extra classes for everyday life</small></div><span>B1</span></li>
-        <li><div>French<small>Understand everyday speech</small></div><span>Learning</span></li>
-      </ul>
-    </div>
-
-    <div class="t hov rv eduT">
-      <div class="lbl">Education</div>
-      <div style="font-family:Manrope,sans-serif;font-weight:700;font-size:1.35rem;line-height:1.25;letter-spacing:-.01em">MSc &amp; BSc Computer Science</div>
-      <p class="s">University of Crete · both theses graded 10/10</p>
-    </div>
-  </div>
-
-  <section id="about">
-    <div class="head rv"><div><span class="idx">01</span><h2>About</h2></div></div>
-    <div class="about">
-      <div class="t rv"><p>Senior Director of Product Management with 6+ years taking products from idea to launch and beyond. I started as an engineer and designer, which lets me bridge business goals, user needs and technical reality. I care about human-centred products that make complex things simple and genuinely improve outcomes for the people who use them.</p></div>
-      <div class="t focus rv">
-        <div class="lbl">What I bring</div>
-        <div><b>i.</b><span><strong>Product strategy</strong>Roadmaps, go-to-market and KPI frameworks</span></div>
-        <div><b>ii.</b><span><strong>Human-centred design</strong>User research, prototyping, design systems</span></div>
-        <div><b>iii.</b><span><strong>Technical depth</strong>Hands-on engineering, from web and cloud to data and 3D</span></div>
-        <div><b>iv.</b><span><strong>Leadership</strong>Cross-functional teams, C-suite and enterprise clients</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="head rv"><div><span class="idx">02</span><h2>Experience</h2></div><p>Six years of growth, from intern to Senior Director. Select a role.</p></div>
-    <div class="xp rv">
-      <div class="t tabs" id="tabs" role="tablist"></div>
-      <div class="t panel" id="panel" role="tabpanel"></div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="head rv"><div><span class="idx">03</span><h2>Education</h2></div></div>
-    <div class="edu">
-      <div class="t hov rv"><div class="yr">2021 to 2025</div><h3>MSc Computer Science, Extended Reality (XR)</h3><p>University of Crete · Heraklion, Greece</p><p class="th">Thesis: “Exploring Gamification Elements in Serious XR Games”</p><span class="chip">Grade 10/10</span></div>
-      <div class="t hov rv"><div class="yr">2016 to 2020</div><h3>BSc Computer Science</h3><p>University of Crete · Heraklion, Greece</p><p class="th">Thesis: “Big-Data Interaction with a Virtual Human inside VR”</p><span class="chip">Grade 10/10</span></div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <div class="head rv"><div><span class="idx">04</span><h2>Publications</h2></div><p>Peer-reviewed research in healthcare technology and simulation.</p></div>
-    <div class="pubs rv" id="pubs"></div>
-  </section>
-
-  <section id="skills">
-    <div class="head rv"><div><span class="idx">05</span><h2>Skills</h2></div><p>Filter by area.</p></div>
-    <div class="seg rv" id="seg"></div>
-    <div class="sk" id="sk"></div>
-  </section>
-
-  <section class="cta" id="contact">
-    <div class="t big rv">
-      <h2>Let’s build something <em>meaningful.</em></h2>
-      <p>Open to conversations about product leadership, new roles and collaborations.</p>
-      <div class="actions">
-        <a class="btn" href="mailto:grigeleni1998@gmail.com">Email me</a>
-        <button class="btn ghost" id="copy">Copy email</button>
-      </div>
-    </div>
-    <div class="links">
-      <a class="t hov rv" href="mailto:grigeleni1998@gmail.com"><div><div class="lbl">Email</div><b>grigeleni1998@gmail.com</b></div><span>↗</span></a>
-      <a class="t hov rv" href="https://www.linkedin.com/in/elenigrigoriou98" target="_blank" rel="noopener"><div><div class="lbl">LinkedIn</div><b>in/elenigrigoriou98</b></div><span>↗</span></a>
-      <div class="t rv"><div class="lbl">Location</div><b>Geneva, Switzerland</b></div>
-    </div>
-  </section>
-
-  <footer>© 2026 Eleni Grigoriou</footer>
 </div>
 
-<nav class="dock" id="dock">
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#publications" class="hide-sm">Research</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
-</nav>
+<main class="wrap" id="top">
+
+<header>
+  <img src="photo.jpg" alt="Eleni Grigoriou" width="132" height="132">
+  <div>
+    <h1>Eleni Grigoriou</h1>
+    <p class="role">Senior Director of Product Management · Geneva, Switzerland</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:grigeleni1998@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/elenigrigoriou98" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
+      <button class="btn" onclick="window.print()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Save as PDF</button>
+    </div>
+  </div>
+  <figure class="mesh" aria-hidden="true"><canvas id="mesh" width="460" height="460"></canvas><figcaption><b>Live 3D</b> · rendered in your browser</figcaption></figure>
+</header>
+
+<ul class="facts">
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Based in Geneva</li>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>6+ years in product</li>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>MSc Computer Science</li>
+  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h7M7.5 3v2M5.5 5c0 4 3 7 6 8M10 5c-.5 3-3 6.5-6 8M13 21l4-9 4 9M14.5 18h5"/></svg>English C2 · German B1 · learning French</li>
+</ul>
+
+<p class="summary">I'm a product manager with 6+ years of experience, currently Senior Director of Product Management at ORamaVR in Geneva. I started as a developer and UI/UX designer before moving into product, so I'm comfortable working across business, design and engineering. Most of my work has been on B2B software for hospitals and medical training.</p>
+
+<div class="focus">
+  <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg><b>MedTech</b><span>Software for surgical and clinical training, used by hospitals and medical schools.</span></div>
+  <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg><b>Computer graphics &amp; 3D</b><span>Real-time 3D, VR and AR, from Unity and OpenGL to interaction design.</span></div>
+  <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg><b>Product &amp; UX</b><span>Strategy, roadmaps and user research that turn complex tech into usable products.</span></div>
+</div>
+
+<section id="highlights">
+  <h2>Highlights</h2>
+  <div class="hl">
+    <div><b>Intern to Senior Director in under 6 years</b><span>Promoted six times at the same company, from XR content intern to leading product.</span></div>
+    <div><b>Enterprise healthcare clients</b><span>Own key client relationships and delivery for hospitals and healthcare institutions.</span></div>
+    <div><b>Technical background</b><span>Former developer with an MSc in Computer Science, so I speak the engineers' language.</span></div>
+    <div><b>Published research</b><span>Co-author of papers in IEEE Computer Graphics and Applications and Springer.</span></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="company">
+    <div class="chead"><h3>ORamaVR SA</h3><span>Geneva &amp; Heraklion · 2020 – Present</span></div>
+    <p class="cnote">Healthcare training software. Click a role to see details.</p>
+    <div class="steps">
+      <details class="job cur" open>
+        <summary><span class="jt">Senior Director of Product Management<span class="pill">Current</span></span><span class="jd">Jan 2026 – Present<i></i></span></summary>
+        <ul>
+          <li>Lead product direction across the company's simulation portfolio and work with the C-suite on roadmap, investment and go-to-market</li>
+          <li>Manage and mentor a cross-functional team across product, engineering, design and content</li>
+          <li>Own key enterprise client relationships and oversee delivery for healthcare institutions</li>
+          <li>Set up KPI frameworks to measure training effectiveness and user engagement</li>
+        </ul>
+      </details>
+      <details class="job">
+        <summary><span class="jt">Vice President of Product Management</span><span class="jd">Jun 2024 – Dec 2025<i></i></span></summary>
+        <ul>
+          <li>Shaped product vision and strategy in line with the company's growth goals</li>
+          <li>Led release cycles from concept to launch, including new product initiatives</li>
+          <li>Worked with engineering and design to ship user-tested products</li>
+        </ul>
+      </details>
+      <details class="job">
+        <summary><span class="jt">Senior Product &amp; UI/UX Manager</span><span class="jd">Sep 2023 – Jun 2024<i></i></span></summary>
+        <ul>
+          <li>Led product design and management for complex simulation modules</li>
+          <li>Ran user research that informed prioritisation and UX improvements</li>
+          <li>Managed the Figma design system and prototyping process across all products</li>
+        </ul>
+      </details>
+      <details class="job">
+        <summary><span class="jt">Product Manager &amp; UI/UX</span><span class="jd">Jan 2022 – Sep 2023<i></i></span></summary>
+        <ul>
+          <li>Defined requirements and wrote user stories, from research through to shipped features</li>
+          <li>Owned the backlog, QA and user testing in an Agile/Scrum team</li>
+          <li>Designed wireframes and prototypes and defined VR interaction patterns used across the product suite</li>
+        </ul>
+      </details>
+      <details class="job">
+        <summary><span class="jt">UI/UX &amp; Cloud Developer</span><span class="jd">Apr 2021 – Jan 2022<i></i></span></summary>
+        <ul>
+          <li>Built web applications and analytics dashboards (HTML, CSS, JavaScript)</li>
+          <li>Developed REST APIs with .NET Core and EF Core; managed MySQL and SQL Server databases</li>
+          <li>Ran usability tests and iterated on the UX based on feedback</li>
+        </ul>
+      </details>
+      <details class="job">
+        <summary><span class="jt">UI/UX &amp; Frontend Developer</span><span class="jd">Nov 2020 – Apr 2021<i></i></span></summary>
+        <ul>
+          <li>Developed user interfaces in Unity, C++ (Qt) and Java (Swing/JavaFX); contributed to the MAGES SDK</li>
+        </ul>
+      </details>
+      <details class="job">
+        <summary><span class="jt">XR Content Developer<small>Internship</small></span><span class="jd">Jul 2020 – Oct 2020<i></i></span></summary>
+        <ul>
+          <li>Developed VR content and interfaces in Unity using C# and C++</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+
+  <div class="company">
+    <div class="chead"><h3>Virgin Media</h3><span>United Kingdom · Feb 2019 – Jun 2019</span></div>
+    <div class="steps">
+      <details class="job">
+        <summary><span class="jt">Technology Intern</span><span class="jd">5 months<i></i></span></summary>
+        <ul><li>Worked in the technology team on big data projects, supporting data processing and analysis</li></ul>
+      </details>
+    </div>
+  </div>
+
+  <div class="company">
+    <div class="chead"><h3>Duty Free Shops</h3><span>Rhodes Airport · Summers 2018, 2019</span></div>
+    <div class="steps">
+      <details class="job">
+        <summary><span class="jt">Sales Associate<small>Seasonal</small></span><span class="jd">2 summers<i></i></span></summary>
+        <ul><li>Customer service in a busy international retail environment</li></ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="item"><div><h3>MSc Computer Science, Extended Reality</h3><p>University of Crete · Thesis: “Exploring Gamification Elements in Serious XR Games” · Grade 10/10</p></div><span class="d">2021 – 2025</span></div>
+  <div class="item"><div><h3>BSc Computer Science</h3><p>University of Crete · Thesis: “Big-Data Interaction with a Virtual Human inside VR” · Grade 10/10</p></div><span class="d">2016 – 2020</span></div>
+
+  <h2 style="margin-top:30px">Publications</h2>
+  <a class="pub" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=%22The+Uncanny+Valley+in+medical+simulation-based+training%22"><b>The Uncanny Valley in medical simulation-based training: a visual summary</b><span>Grigoriou E., Kamarianakis M. N., Papagiannakis G. · arXiv, 2025</span> <em>First author</em></a>
+  <a class="pub" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=%22A+Computational+Medical+XR+Discipline%22"><b>A Computational Medical XR Discipline</b><span>Papagiannakis G., Greenleaf W., Cole M., Zhang M., Grigoriou E. et al. · CGI 2024, Springer, 2025</span></a>
+  <a class="pub" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=%22MAGES+4.0%22+medical+metaverse"><b>MAGES 4.0: Accelerating the World’s Transition to VR Training and Democratizing the Authoring of the Medical Metaverse</b><span>Zikas P. et al., incl. Grigoriou E. · IEEE Computer Graphics and Applications, 2023</span> <em>Cited by 41</em></a>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="tags" id="tags" role="tabpanel"></div>
+</section>
+
+<section id="languages">
+  <h2>Languages</h2>
+  <div class="langs">
+    <div class="lang"><div class="top"><b>Greek</b><span class="lvl">Native</span></div><p>Mother tongue</p><div class="cefr" data-l="6"></div></div>
+    <div class="lang"><div class="top"><b>English</b><span class="lvl">C2</span></div><p>Fluent, my working language</p><div class="cefr" data-l="6"></div></div>
+    <div class="lang"><div class="top"><b>German</b><span class="lvl">B1</span></div><p>Extra classes for everyday life</p><div class="cefr" data-l="3"></div></div>
+    <div class="lang"><div class="top"><b>French</b><span class="lvl">Learning</span></div><p>I understand everyday speech</p><div class="cefr" data-l="1"></div></div>
+  </div>
+</section>
+
+<div class="contact" id="contact">
+  <div><h2>Let's talk</h2><p>Always happy to talk product, MedTech and 3D. Feel free to reach out.</p></div>
+  <div class="btns">
+    <a class="btn" href="mailto:grigeleni1998@gmail.com">Email me</a>
+    <button class="btn ghost" id="copy">Copy email</button>
+    <a class="btn ghost" href="https://www.linkedin.com/in/elenigrigoriou98" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div>
+
+<footer>Eleni Grigoriou · Geneva, Switzerland</footer>
+</main>
 <div id="toast">Email copied</div>
 
 <script>
-const roles=[
- {d:"Jan 2026 to present",t:"Senior Director of Product Management",o:"ORamaVR SA · Geneva, Switzerland",b:[
-  "Lead strategic product direction across ORamaVR's full XR simulation portfolio; partner with the C-suite on roadmap, investment and go-to-market",
-  "Manage and mentor cross-functional teams spanning product, engineering, design and content",
-  "Own key enterprise client relationships and oversee delivery of medical XR training solutions for healthcare institutions",
-  "Establish KPI frameworks to measure simulation efficacy and user engagement at scale"]},
- {d:"Jun 2024 to Dec 2025",t:"Vice President of Product Management",o:"ORamaVR SA · Geneva, Switzerland",b:[
-  "Elevated product vision and strategy across the XR simulation portfolio, aligned with business growth objectives",
-  "Led new product release cycles end to end, from concept through launch, including Product Innovation initiatives",
-  "Collaborated with engineering and design using Figma and Adobe Creative Suite to deliver polished, user-tested XR experiences"]},
- {d:"Sep 2023 to Jun 2024",t:"Senior Product & UI/UX Manager",o:"ORamaVR SA · Geneva, Switzerland",b:[
-  "Led end-to-end product design and management for complex XR simulation modules",
-  "Directed user research programmes informing feature prioritisation and UX improvements",
-  "Managed the Figma-based design system and prototyping pipeline across all products"]},
- {d:"Jan 2022 to Sep 2023",t:"Product Manager & UI/UX",o:"ORamaVR SA · Heraklion, Greece",b:[
-  "Defined product strategy, market research and requirements for XR medical simulations, from user stories to shipped features",
-  "Owned the feature prioritisation backlog, QA and user testing in an Agile/Scrum environment",
-  "Designed low- and high-fidelity wireframes and UI prototypes; defined VR interaction patterns adopted across the full product suite"]},
- {d:"Apr 2021 to Jan 2022",t:"UI/UX & Cloud Developer",o:"ORamaVR SA · Heraklion, Greece",b:[
-  "Built front-end web applications and interactive analytics dashboards (HTML5, CSS3, JavaScript)",
-  "Developed back-end REST APIs using .NET Core and EF Core; managed MySQL and SQL Server databases via Plesk",
-  "Managed WordPress-based web presences, including theme customisation, plugin configuration and Plesk server administration",
-  "Ran usability testing cycles and iterated on UX based on structured user feedback"]},
- {d:"Nov 2020 to Apr 2021",t:"UI/UX & Frontend Developer",o:"ORamaVR SA · Heraklion, Greece",b:[
-  "Developed Unity-based user interfaces with C++ (Qt) and Java GUI (Swing/JavaFX) components; contributed to the MAGES SDK",
-  "Applied responsive design and low/high-fidelity wireframing practices across web and XR platforms"]},
- {d:"Jul 2020 to Oct 2020",t:"XR Content Developer (Internship)",o:"ORamaVR SA · Heraklion, Greece",b:[
-  "Developed XR content and Unity interfaces using C# and C++; gained deep familiarity with MAGES SDK pipelines"]},
- {d:"Feb 2019 to Jun 2019",t:"Technology Intern",o:"Virgin Media · United Kingdom",b:[
-  "Worked within the technology team on big data projects, supporting data processing and analysis workflows",
-  "Gained hands-on experience with large-scale data tools and distributed computing in a major telecoms environment",
-  "Collaborated with engineers in an international, fast-paced corporate setting"]},
- {d:"Summers 2018 & 2019",t:"Sales Associate (Seasonal)",o:"Duty Free Shops, Diagoras Airport · Rhodes, Greece",b:[
-  "Delivered customer service in a high-traffic international retail environment"]}
-];
-const pubs=[
- {y:"2025",t:"The Uncanny Valley in medical simulation-based training: a visual summary",a:"E. Grigoriou, M. N. Kamarianakis, G. Papagiannakis",v:"arXiv · December 2025 · First author"},
- {y:"2025",t:"A Computational Medical XR Discipline",a:"G. Papagiannakis, W. Greenleaf, M. Cole, M. Zhang, E. Grigoriou, M. Kamarianakis et al.",v:"Advances in Computer Graphics (CGI 2024) · Springer · March 2025"},
- {y:"2023",t:"MAGES 4.0: Accelerating the World’s Transition to VR Training and Democratizing the Authoring of the Medical Metaverse",a:"P. Zikas, A. Protopsaltis, N. Lydatakis, M. Kentros, S. Geronikolakis, S. Kateros, M. Kamarianakis, E. Grigoriou et al.",v:"IEEE Computer Graphics and Applications · Vol. 43, Issue 2 · 2023 · Cited by 41"}
-];
-const skills=[
- ["Product","Strategy & Vision","Product Roadmapping · Product Vision · Go-to-Market Strategy · Competitive Analysis · Market Research · Business Case Development · Product-Led Growth"],
- ["Product","Execution","Feature Prioritisation · Backlog Management · Sprint Planning · OKRs & KPIs · Release Management · Risk Management · Dependency Mapping"],
- ["Product","Process & Methods","Agile · Scrum · Kanban · Lean Product Development · Jobs-to-Be-Done · Design Thinking · A/B Testing · Beta Programmes"],
- ["Product","Stakeholders & Ops","Stakeholder Management · Executive Presentations · CRM · Business Development · Cross-functional Leadership · Vendor Management · Enterprise Client Delivery"],
- ["AI","AI Agents & Automation","Agent design · Agentic workflows · Multi-agent orchestration · Workflow automation for product management · Prompt engineering · AI-assisted research and documentation"],
- ["AI","AI Testing & Quality","Agent testing and evaluation · LLM output evaluation · AI-driven test automation · Guardrails · Human-in-the-loop review"],
- ["AI","AI Tools & Integrations","Claude · Claude Code · ChatGPT · MCP integrations · AI knowledge bases · Custom skills and slash commands"],
- ["Design","UX Process","User Research · Usability Testing · Heuristic Evaluation · Journey Mapping · Persona Development · Information Architecture · UX Writing"],
- ["Design","Wireframing & Prototyping","Low-Fidelity Wireframes · High-Fidelity UI Mockups · Interactive Prototypes · Figma · Adobe XD · Design Systems · Component Libraries"],
- ["Design","Visual & XR Design","UI Design · Visual Design · VR Interaction Design · Spatial UI · Responsive Design · Photoshop · Illustrator · Premiere · Lightroom"],
- ["Design","Web & CMS","WordPress · Theme Customisation · Plugin Configuration · Wix · Elementor · Content Management"],
- ["Engineering","Languages","C · C++ · C# · Java · Python · Ruby · JavaScript · TypeScript · PHP · SQL · HLSL / GLSL"],
- ["Engineering","Frontend","HTML5 · CSS3 · Angular · AngularJS · Bootstrap · React (fundamentals) · Node.js · Webpack · Swing · JavaFX · Qt · WinForms / WPF"],
- ["Engineering","Backend & APIs",".NET Core · ASP.NET MVC · EF Core · Ruby on Rails · Express.js · Django (fundamentals) · REST · GraphQL (fundamentals) · OAuth 2.0 · JWT · Swagger / OpenAPI"],
- ["Engineering","Servers & Hosting","Plesk · IIS · Apache · Nginx · Linux server administration · cPanel"],
- ["Engineering","Databases","MySQL · SQL Server (T-SQL) · PostgreSQL · SQLite · Redis · Firebase (Firestore) · MongoDB (fundamentals) · Schema design · Query optimisation"],
- ["Data & Cloud","Big Data","Apache Spark · Hadoop (HDFS / MapReduce) · Kafka (fundamentals) · Distributed computing"],
- ["Data & Cloud","Python Data Stack","Pandas · NumPy · Matplotlib · Seaborn · Scikit-learn (fundamentals) · Jupyter"],
- ["Data & Cloud","BI & ML","Power BI · Tableau (fundamentals) · Google Data Studio · Dashboards · ML and Deep Learning fundamentals · MLOps · Data pipelines"],
- ["Data & Cloud","DevOps & Cloud","Docker · Docker Compose · Kubernetes awareness · AWS (EC2 · S3 · Lambda basics) · Azure (fundamentals) · GitHub Actions · GitLab CI · Git"],
- ["XR & 3D","Engines & SDKs","Unity · Unreal Engine (awareness) · XR Interaction Toolkit · OpenXR · MAGES SDK"],
- ["XR & 3D","Domains","VR · AR · MR · XR Content Development · Spatial Computing · 3D asset workflows"],
- ["XR & 3D","Graphics","Computer Graphics · OpenGL · LLVM · HLSL / GLSL shaders"]
-];
-const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
-
-/* experience tabs */
-const tabs=document.getElementById("tabs"),panel=document.getElementById("panel");
-tabs.innerHTML=roles.map((r,i)=>`<button role="tab" data-i="${i}"><span class="tt">${esc(r.t)}</span><span class="td">${esc(r.d)}</span></button>`).join("");
-function show(i){
-  const r=roles[i];
-  tabs.querySelectorAll("button").forEach((b,j)=>{b.classList.toggle("on",i===j);b.setAttribute("aria-selected",i===j)});
-  panel.innerHTML=`<div class="anim"><span class="when">${esc(r.d)}</span><h3>${esc(r.t)}</h3><p class="org">${esc(r.o)}</p>
-   <ul>${r.b.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
-   <div class="progress">${roles.map((_,j)=>`<i class="${j>=i?"on":""}"></i>`).join("")}</div></div>`;
-}
-tabs.addEventListener("click",e=>{const b=e.target.closest("button");if(b)show(+b.dataset.i)});
-tabs.addEventListener("keydown",e=>{
-  const cur=[...tabs.children].findIndex(b=>b.classList.contains("on"));
-  if(e.key==="ArrowDown"||e.key==="ArrowRight"){e.preventDefault();const n=Math.min(cur+1,roles.length-1);show(n);tabs.children[n].focus()}
-  if(e.key==="ArrowUp"||e.key==="ArrowLeft"){e.preventDefault();const n=Math.max(cur-1,0);show(n);tabs.children[n].focus()}
+const skills={
+ "Product":["Product strategy","Roadmapping","Prioritisation","OKRs & KPIs","Agile / Scrum","Go-to-market","Stakeholder management","Enterprise client delivery","Release management","Market research"],
+ "Design & UX":["User research","Usability testing","Wireframing","Prototyping","Design systems","Figma","Adobe Creative Suite","VR interaction design"],
+ "AI":["Building AI agents","AI workflows for product and management tasks","Testing AI agents","Prompt writing","Claude","ChatGPT"],
+ "Engineering":["C#","C++","Java","Python","JavaScript / TypeScript","SQL","Angular",".NET Core","REST APIs","Git"],
+ "Data & Cloud":["Spark","Hadoop","Pandas","Power BI","Docker","AWS","MySQL","SQL Server"],
+ "XR & 3D":["Unity","VR / AR","OpenXR","OpenGL","MAGES SDK"]
+};
+const tabs=document.getElementById("tabs"),tags=document.getElementById("tags");
+Object.keys(skills).forEach((k,i)=>{
+  const b=document.createElement("button");b.textContent=k;b.setAttribute("role","tab");b.setAttribute("aria-selected",i===0);
+  b.onclick=()=>{tabs.querySelectorAll("button").forEach(x=>x.setAttribute("aria-selected",x===b));show(k)};
+  tabs.appendChild(b);
 });
-show(0);
+function show(k){tags.innerHTML=skills[k].map(s=>`<span>${s.replace(/&/g,"&amp;")}</span>`).join("")}
+show("Product");
 
-/* publications */
-const arrow='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-document.getElementById("pubs").innerHTML=pubs.map(p=>`<a class="pub" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=${encodeURIComponent('"'+p.t+'"')}">
- <div class="y">${p.y}</div><div><h3>${esc(p.t)}</h3><p>${esc(p.a)}</p><p>${esc(p.v)}</p></div><div class="go">${arrow}</div></a>`).join("");
+document.querySelectorAll(".cefr").forEach(c=>{const l=+c.dataset.l;c.innerHTML=Array.from({length:6},(_,i)=>`<i class="${i<l?"f":""}"></i>`).join("")});
 
-/* skills */
-const seg=document.getElementById("seg"),sk=document.getElementById("sk");
-const cats=["All",...new Set(skills.map(s=>s[0]))];
-seg.innerHTML=cats.map((c,i)=>`<button class="${i?"":"on"}">${esc(c)}</button>`).join("");
-function renderSk(c){
-  sk.innerHTML=skills.filter(s=>c==="All"||s[0]===c).map((s,i)=>`<div class="t" style="animation-delay:${i*25}ms"><div class="lbl">${esc(s[0])}</div><h3>${esc(s[1])}</h3><div class="tags">${s[2].split(" · ").map(x=>`<span>${esc(x)}</span>`).join("")}</div></div>`).join("");
+const bar=document.getElementById("bar"),head=document.querySelector("header");
+const links=[...bar.querySelectorAll("nav a")],secs=links.map(a=>document.querySelector(a.getAttribute("href")));
+function onScroll(){
+  bar.classList.toggle("show",head.getBoundingClientRect().bottom<0);
+  let cur=-1;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.35)cur=i});
+  links.forEach((a,i)=>a.classList.toggle("on",i===cur));
 }
-seg.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;seg.querySelectorAll("button").forEach(x=>x.classList.remove("on"));b.classList.add("on");renderSk(b.textContent)});
-renderSk("All");
-
-/* Geneva clock */
-const clock=document.getElementById("clock");
-function tick(){clock.textContent=new Intl.DateTimeFormat("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:"Europe/Zurich"}).format(new Date())}
-tick();setInterval(tick,15000);
-
-/* reveal + counters */
-const io=new IntersectionObserver(es=>es.forEach(e=>{
-  if(!e.isIntersecting)return;const el=e.target;el.classList.add("in");io.unobserve(el);
-  const ns=el.matches("[data-count]")?[el]:el.querySelectorAll("[data-count]");
-  ns.forEach(n=>{const to=+n.dataset.count,t0=performance.now();
-    (function step(t){const p=Math.min((t-t0)/1300,1);n.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(t0)});
-}),{threshold:.12});
-document.querySelectorAll(".rv").forEach(el=>io.observe(el));
-
-/* dock active state */
-const links=[...document.querySelectorAll("#dock a")],secs=links.map(a=>document.querySelector(a.getAttribute("href")));
-function onScroll(){let cur=-1;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.45)cur=i});links.forEach((a,i)=>a.classList.toggle("active",i===cur))}
 addEventListener("scroll",onScroll,{passive:true});onScroll();
 
-/* copy email */
-document.getElementById("copy").addEventListener("click",async()=>{
+document.getElementById("copy").onclick=async()=>{
   const t=document.getElementById("toast");
   try{await navigator.clipboard.writeText("grigeleni1998@gmail.com");t.textContent="Email copied"}catch(e){t.textContent="grigeleni1998@gmail.com"}
   t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800);
-});
+};
+/* live 3D mesh: icosphere with a heartbeat pulse */
+(function(){
+  const cv=document.getElementById("mesh");if(!cv)return;
+  const ctx=cv.getContext("2d"),W=cv.width,H=cv.height;
+  const t=(1+Math.sqrt(5))/2;
+  let V=[[-1,t,0],[1,t,0],[-1,-t,0],[1,-t,0],[0,-1,t],[0,1,t],[0,-1,-t],[0,1,-t],[t,0,-1],[t,0,1],[-t,0,-1],[-t,0,1]].map(v=>{const l=Math.hypot(...v);return v.map(c=>c/l)});
+  let F=[[0,11,5],[0,5,1],[0,1,7],[0,7,10],[0,10,11],[1,5,9],[5,11,4],[11,10,2],[10,7,6],[7,1,8],[3,9,4],[3,4,2],[3,2,6],[3,6,8],[3,8,9],[4,9,5],[2,4,11],[6,2,10],[8,6,7],[9,8,1]];
+  for(let s=0;s<2;s++){const cache={},NF=[];
+    const mid=(a,b)=>{const k=a<b?a+"_"+b:b+"_"+a;if(cache[k]!=null)return cache[k];const m=V[a].map((c,i)=>(c+V[b][i])/2),l=Math.hypot(...m);V.push(m.map(c=>c/l));return cache[k]=V.length-1};
+    F.forEach(([a,b,c])=>{const ab=mid(a,b),bc=mid(b,c),ca=mid(c,a);NF.push([a,ab,ca],[b,bc,ab],[c,ca,bc],[ab,bc,ca])});F=NF}
+  const E=new Set();F.forEach(([a,b,c])=>[[a,b],[b,c],[c,a]].forEach(([x,y])=>E.add(x<y?x+"_"+y:y+"_"+x)));
+  const edges=[...E].map(k=>k.split("_").map(Number));
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let visible=true;new IntersectionObserver(e=>visible=e[0].isIntersecting).observe(cv);
+  function beat(ms){const p=(ms%1100)/1100;return .06*Math.exp(-Math.pow((p-.08)/.035,2))+.035*Math.exp(-Math.pow((p-.26)/.04,2))}
+  function frame(ms){
+    if(visible||reduce){
+      const a=reduce?0.6:ms*0.00025,tilt=0.35,k=1+(reduce?0:beat(ms));
+      const ca=Math.cos(a),sa=Math.sin(a),ct=Math.cos(tilt),st=Math.sin(tilt);
+      const P=V.map(([x,y,z])=>{
+        const bump=1+0.12*Math.sin(3*x+a)*Math.sin(2*y)+0.06*Math.cos(4*z);
+        x*=bump*k;y*=bump*k*1.04;z*=bump*k;
+        let X=x*ca+z*sa,Z=-x*sa+z*ca,Y=y*ct-Z*st;Z=y*st+Z*ct;
+        const s=W*0.82/(2.6-Z*0.6);return [W/2+X*s,H/2+Y*s,Z]});
+      ctx.clearRect(0,0,W,H);
+      for(const [i,j] of edges){const d=(P[i][2]+P[j][2])/2;ctx.strokeStyle=`rgba(31,78,121,${0.07+0.28*(d+1)/2})`;ctx.lineWidth=1.2;
+        ctx.beginPath();ctx.moveTo(P[i][0],P[i][1]);ctx.lineTo(P[j][0],P[j][1]);ctx.stroke()}
+      for(const p of P){const d=(p[2]+1)/2;ctx.fillStyle=`rgba(31,78,121,${0.2+0.6*d})`;ctx.beginPath();ctx.arc(p[0],p[1],1.2+1.8*d,0,7);ctx.fill()}
+    }
+    if(!reduce)requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+addEventListener("beforeprint",()=>document.querySelectorAll("details").forEach(d=>d.open=true));
 </script>
 </body>
 </html>
