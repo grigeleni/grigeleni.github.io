@@ -41,7 +41,7 @@ h1{font-size:2.3rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;margi
 .lead{font-size:1.08rem;color:#2d3746;margin:0}
 .note{margin:18px 0 0;padding:12px 16px;border-radius:10px;background:var(--soft);border:1px solid var(--line);font-size:.9rem;color:var(--muted)}
 
-.toc{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.toc{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:28px}
 .toc a{display:block;padding:16px;border:1px solid var(--line);border-radius:var(--radius);color:var(--text);transition:border-color .2s,box-shadow .2s}
 .toc a:hover{text-decoration:none;border-color:#c9d6e4;box-shadow:0 6px 18px -12px rgba(31,78,121,.4)}
 .toc small{display:block;color:var(--accent);font-weight:600;font-size:.78rem;letter-spacing:.06em;margin-bottom:4px}
@@ -67,6 +67,11 @@ figcaption{font-size:.84rem;color:var(--muted);margin-top:10px}
 .out b{display:block;font-size:.95rem;margin-bottom:2px}
 .out span{font-size:.86rem;color:var(--muted);line-height:1.45;display:block}
 
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 6px}
+.gallery figure{margin:0;padding:8px;background:#fff;text-align:center}
+.gallery img{width:100%;height:auto;display:block;border-radius:6px}
+.gallery figcaption{margin-top:6px;font-size:.8rem}
+.gallery figcaption b{display:block;color:var(--text);font-size:.88rem}
 .research{display:grid;gap:10px}
 .research div{padding:14px 16px;border:1px solid var(--line);border-radius:10px}
 .research b{display:block}
@@ -86,6 +91,7 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
   .intro{padding-top:36px}
   h1{font-size:1.85rem}
   .toc,.out{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
   .bar nav a.hide-m{display:none}
   figure{padding:12px;overflow-x:auto}
   figure svg{min-width:560px}
@@ -103,6 +109,7 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
       <a href="#vr" class="hide-m">VR patterns</a>
       <a href="#dashboards" class="hide-m">Dashboards</a>
       <a href="#system" class="hide-m">Design system</a>
+      <a href="#patterns" class="hide-m">XR patterns</a>
       <a href="index.html">CV</a>
     </nav>
   </div>
@@ -113,13 +120,14 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
 <section class="intro">
   <p class="eyebrow">Design portfolio</p>
   <h1>Designing complex software that people learn by doing</h1>
-  <p class="lead">I spent four years designing the products at ORamaVR, a Geneva company that makes training software for surgeons and other clinicians, before leading its product management. Below are three pieces of work that shaped how the products look and behave today. I work in Figma and the Adobe Creative Suite, and I have a computer science background, so I design with engineering from the first sketch.</p>
-  <p class="note">Product screens are covered by client confidentiality, so the diagrams here describe structure and process. I am happy to walk through the real work in a conversation.</p>
+  <p class="lead">I spent four years designing the products at ORamaVR, a Geneva company that makes training software for surgeons and other clinicians, before leading its product management. Below are four pieces of work that shaped how the products look and behave today. I work in Figma and the Adobe Creative Suite, and I have a computer science background, so I design with engineering from the first sketch.</p>
+  <p class="note">Product screens are covered by client confidentiality, so the first three case studies use diagrams to describe structure and process. The fourth, from my MSc research, shows the real visuals. I am happy to walk through the real work in a conversation.</p>
 
   <div class="toc">
     <a href="#vr"><small>01</small><b>VR interaction patterns for surgical training</b></a>
     <a href="#dashboards"><small>02</small><b>Analytics dashboards for training data</b></a>
     <a href="#system"><small>03</small><b>One design system across every product</b></a>
+    <a href="#patterns"><small>04</small><b>Pattern-driven feedback for XR training</b></a>
   </div>
 </section>
 
@@ -174,6 +182,7 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
     <div><b>Still in use</b><span>The patterns are still the base of the product line today.</span></div>
     <div><b>Faster to build</b><span>New simulations reuse the patterns instead of new designs.</span></div>
   </div>
+  <p style="margin-top:14px">My MSc research took this further and turned the patterns into a no-code system. See <a href="#patterns">case study 04</a>.</p>
 </article>
 
 <article id="dashboards">
@@ -280,6 +289,44 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
     <div><b>One family</b><span>The products now look and behave as one platform.</span></div>
     <div><b>Faster work</b><span>Designers and developers start from shared components.</span></div>
     <div><b>Screen and VR</b><span>The same system covers flat screens and headsets.</span></div>
+  </div>
+</article>
+
+<article id="patterns">
+  <span class="num">Case study 04 · MSc research</span>
+  <h2>Pattern-driven feedback for XR training</h2>
+  <ul class="meta">
+    <li><b>Role</b> Researcher and designer</li>
+    <li><b>When</b> 2025</li>
+    <li><b>Where</b> University of Crete, MSc thesis, grade 10/10</li>
+  </ul>
+
+  <h3>The problem</h3>
+  <p>In XR training, every hint, highlight and reward was scripted by hand, separately for every scenario. Instructors depended on developers for each change, the same feedback looked different from one scenario to the next, and nothing could be reused.</p>
+
+  <h3>What I did</h3>
+  <ul class="pts">
+    <li>Brought together interaction patterns (what the trainee does) and visualization patterns (what the trainee sees) into one model, with gamification on top to keep trainees motivated.</li>
+    <li>Gave every action a default set of visual cues, for example Insert shows a ghost of the target, an arrow and a label.</li>
+    <li>Designed four new interaction patterns (Activate, Trajectory, Question, Choice) and two new visual ones (motion and progress indicators).</li>
+    <li>Designed a gamification panel inside the authoring tool, so authors pick and adjust feedback visually instead of writing code.</li>
+  </ul>
+
+  <div class="gallery">
+    <figure><img src="img/pattern-insert.webp" alt="Insert pattern: a ghost of the part shows where it goes, with arrows and a label" loading="lazy" width="520" height="520"><figcaption><b>Insert</b>Ghost, arrow, label</figcaption></figure>
+    <figure><img src="img/pattern-use.webp" alt="Use pattern: a tool and its target, with a rotation cue" loading="lazy" width="520" height="520"><figcaption><b>Use</b>Ghost, arrow, label</figcaption></figure>
+    <figure><img src="img/pattern-remove.webp" alt="Remove pattern: a part detaches with a label" loading="lazy" width="520" height="520"><figcaption><b>Remove</b>Ghost, label</figcaption></figure>
+    <figure><img src="img/pattern-activate.webp" alt="Activate pattern: a switch with its current state shown" loading="lazy" width="520" height="520"><figcaption><b>Activate</b>New pattern</figcaption></figure>
+    <figure><img src="img/pattern-trajectory.webp" alt="Trajectory pattern: a curved line guides a continuous movement" loading="lazy" width="512" height="512"><figcaption><b>Trajectory</b>New pattern</figcaption></figure>
+    <figure><img src="img/pattern-question.webp" alt="Question pattern: a question with two answer options" loading="lazy" width="520" height="520"><figcaption><b>Question</b>New pattern</figcaption></figure>
+    <figure><img src="img/pattern-choice.webp" alt="Choice pattern: the trainee chooses between two paths" loading="lazy" width="520" height="520"><figcaption><b>Choice</b>New pattern</figcaption></figure>
+  </div>
+  <p style="font-size:.84rem;color:var(--muted)">Each action in a procedure comes with its own set of visual cues, the same in every scenario.</p>
+
+  <div class="out">
+    <div><b>1 day to 2 minutes</b><span>Time to set up the feedback for one step, compared with scripting it by hand.</span></div>
+    <div><b>150 lines to 0</b><span>Lines of code an author needs to write.</span></div>
+    <div><b>Reusable</b><span>The same feedback profiles work across scenarios.</span></div>
   </div>
 </article>
 
