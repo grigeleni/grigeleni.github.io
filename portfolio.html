@@ -67,7 +67,7 @@ figcaption{font-size:.84rem;color:var(--muted);margin-top:10px}
 .out b{display:block;font-size:.95rem;margin-bottom:2px}
 .out span{font-size:.86rem;color:var(--muted);line-height:1.45;display:block}
 
-#brand g:has(> use[href="#cube"]){filter:drop-shadow(0 7px 7px rgba(43,58,85,.16)) drop-shadow(0 0 10px rgba(255,255,255,.85))}
+#brand g:has(> use[href="#cube"]),#brand g:has(> use[href="#stack"]){filter:drop-shadow(0 7px 7px rgba(43,58,85,.16)) drop-shadow(0 0 10px rgba(255,255,255,.85))}
 #brand .glowcard{filter:drop-shadow(0 10px 18px rgba(134,169,214,.28))}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 6px}
 .gallery figure{margin:0;padding:8px;background:#fff;text-align:center}
@@ -369,7 +369,7 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
 
   <h3>What I designed</h3>
   <ul class="pts">
-    <li>A monogram built as an isometric cube, a nod to designing in three dimensions, with a matching wordmark.</li>
+    <li>A monogram built as a pile of rounded isometric tiles, one per colour, with the initials on the top tile and a matching wordmark.</li>
     <li>A small palette and type system that works on dark and light backgrounds and on screen and print.</li>
     <li>A set of isometric icons drawn on the same grid as the monogram, so every element feels part of one family.</li>
     <li>Applications that put the system to work, including a business card, a LinkedIn banner and a reusable social post template.</li>
@@ -378,23 +378,47 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
   <figure>
     <svg viewBox="0 0 720 250" role="img" aria-label="An isometric cube monogram with the letters eg on its top face, next to the wordmark Eleni Grigoriou">
       <defs>
-        <g id="cube"><path d="M0-40 34.64-20 0 0-34.64-20z" style="fill:var(--t)" stroke="#fff" stroke-opacity=".7" stroke-width="1.2" stroke-linejoin="round"/><path d="M-34.64-20 0 0 0 40-34.64 20z" style="fill:var(--l)"/><path d="M0 0 34.64-20 34.64 20 0 40z" style="fill:var(--r)"/></g>
+        <linearGradient id="sheenT" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".55" stop-color="#fff" stop-opacity=".15"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+        <linearGradient id="shadeL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3a55" stop-opacity=".02"/><stop offset="1" stop-color="#2b3a55" stop-opacity=".16"/></linearGradient>
+        <linearGradient id="shadeR" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3a55" stop-opacity=".14"/><stop offset="1" stop-color="#fff" stop-opacity=".22"/></linearGradient>
+        <g id="cube" stroke-linejoin="round">
+          <path d="M-34.64-20 0 0 0 40-34.64 20z" style="fill:var(--l);stroke:var(--l)" stroke-width="5"/>
+          <path d="M0 0 34.64-20 34.64 20 0 40z" style="fill:var(--r);stroke:var(--r)" stroke-width="5"/>
+          <path d="M-34.64-20 0 0 0 40-34.64 20z" fill="url(#shadeL)"/>
+          <path d="M0 0 34.64-20 34.64 20 0 40z" fill="url(#shadeR)"/>
+          <path d="M0-40 34.64-20 0 0-34.64-20z" style="fill:var(--t);stroke:var(--t)" stroke-width="5"/>
+          <path d="M0-40 34.64-20 0 0-34.64-20z" fill="url(#sheenT)"/>
+          <path d="M-33-19.5 0 .5 33-19.5" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.4" stroke-linecap="round"/>
+        </g>
+        <g id="tile" stroke-linejoin="round">
+          <path d="M-34.64 0 0 20 0 31-34.64 11z" style="fill:var(--l);stroke:var(--l)" stroke-width="5"/>
+          <path d="M0 20 34.64 0 34.64 11 0 31z" style="fill:var(--r);stroke:var(--r)" stroke-width="5"/>
+          <path d="M-34.64 0 0 20 0 31-34.64 11z" fill="url(#shadeL)"/>
+          <path d="M0 20 34.64 0 34.64 11 0 31z" fill="url(#shadeR)"/>
+          <path d="M0-20 34.64 0 0 20-34.64 0z" style="fill:var(--t);stroke:var(--t)" stroke-width="5"/>
+          <path d="M0-20 34.64 0 0 20-34.64 0z" fill="url(#sheenT)"/>
+          <path d="M-33 .5 0 19.5 33 .5" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1.4" stroke-linecap="round"/>
+        </g>
+        <g id="stack">
+          <use href="#tile" y="0" style="--t:#c9dcf3;--l:#a9c6ea;--r:#86a9d6"/>
+          <use href="#tile" y="-17" style="--t:#dff1e7;--l:#c8e6d6;--r:#9fd0b7"/>
+          <use href="#tile" y="-34" style="--t:#f8d3db;--l:#f2a7b5;--r:#e48c9d"/>
+          <use href="#tile" y="-51" style="--t:#f9efbd;--l:#f6e7a1;--r:#ead27c"/>
+          <g transform="matrix(.866 .5 -.866 .5 0 -51)"><text x="0" y="6" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="17" fill="#2b3a55">eg</text></g>
+        </g>
       </defs>
       <radialGradient id="bub" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#a9c6ea" stop-opacity=".55"/><stop offset="1" stop-color="#a9c6ea" stop-opacity="0"/></radialGradient>
       <radialGradient id="bub2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f2a7b5" stop-opacity=".4"/><stop offset="1" stop-color="#f2a7b5" stop-opacity="0"/></radialGradient>
       <rect width="720" height="250" rx="10" fill="#fbf8f2"/>
       <circle cx="140" cy="130" r="120" fill="url(#bub)"/><circle cx="640" cy="60" r="70" fill="url(#bub2)"/><circle cx="560" cy="215" r="34" fill="#a9c6ea" opacity=".25"/><circle cx="610" cy="190" r="12" fill="#a9c6ea" opacity=".3"/><circle cx="40" cy="40" r="10" fill="#f2a7b5" opacity=".3"/>
-      <g transform="translate(140 132) scale(2.3)">
-        <use href="#cube" style="--t:#f6e7a1;--l:#a9c6ea;--r:#86a9d6"/>
-        <g transform="matrix(.866 .5 -.866 .5 0 -20)"><text x="0" y="6" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="17" fill="#2b3a55" letter-spacing="-.5">eg</text></g>
-      </g>
+      <g transform="translate(140 168) scale(1.75)"><use href="#stack"/></g>
       <g font-family="Inter,sans-serif">
         <text x="290" y="112" font-size="30" font-weight="700" fill="#2b3a55" letter-spacing="6">ELENI GRIGORIOU</text>
         <text x="292" y="146" font-size="13" font-weight="600" fill="#7b93c4" letter-spacing="7">PRODUCT · DESIGN · XR</text>
         <text x="292" y="194" font-family="'Dancing Script',cursive" font-size="30" font-weight="600" fill="#e48c9d">learn by doing</text>
       </g>
     </svg>
-    <figcaption>The monogram and wordmark. The cube carries the initials on its top face, and the script line adds a personal voice.</figcaption>
+    <figcaption>The monogram and wordmark. Four pastel tiles stack into one mark, the top tile carries the initials, and the script line adds a personal voice.</figcaption>
   </figure>
 
   <figure>
@@ -435,7 +459,7 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
         <text x="454" y="108" font-size="22" font-weight="700" fill="#2b3a55">Three rules for</text>
         <text x="454" y="136" font-size="22" font-weight="700" fill="#2b3a55">interfaces in VR</text>
         <g font-size="12.5" fill="#1c2430"><text x="454" y="172">1  Keep text big and close</text><text x="454" y="194">2  One action per step</text><text x="454" y="216">3  Feedback you can feel</text></g>
-        <g transform="translate(660 252) scale(.45)"><use href="#cube" style="--t:#f6e7a1;--l:#a9c6ea;--r:#86a9d6"/></g>
+        <g transform="translate(660 262) scale(.36)"><use href="#stack"/></g>
         <text x="454" y="258" font-size="10.5" font-weight="600" fill="#7b93c4" letter-spacing="3">ELENI GRIGORIOU</text>
       </g>
     </svg>
@@ -453,16 +477,16 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
           <rect x="20" y="16" width="320" height="186" rx="12" fill="#e3daf5"/>
           <rect x="380" y="16" width="320" height="186" rx="12" fill="#fbf8f2"/>
         </g>
-        <g transform="translate(180 92) scale(1.1)"><use href="#cube" style="--t:#f6e7a1;--l:#a9c6ea;--r:#86a9d6"/><g transform="matrix(.866 .5 -.866 .5 0 -20)"><text x="0" y="6" text-anchor="middle" font-weight="700" font-size="17" fill="#2b3a55">eg</text></g></g>
+        <g transform="translate(180 110) scale(.85)"><use href="#stack"/></g>
         <text x="180" y="170" text-anchor="middle" font-size="12" font-weight="700" fill="#2b3a55" letter-spacing="5">ELENI GRIGORIOU</text>
         <text x="406" y="60" font-size="17" font-weight="700" fill="#2b3a55" letter-spacing="2">Eleni Grigoriou</text>
         <text x="406" y="80" font-size="11" font-weight="600" fill="#7b93c4" letter-spacing="3">PRODUCT · DESIGN · XR</text>
         <g font-size="11.5" fill="#1c2430"><text x="406" y="124">Geneva, Switzerland</text><text x="406" y="144">grigeleni.github.io</text><text x="406" y="164">linkedin.com/in/eleni-grigoriou98</text></g>
-        <g transform="translate(668 176) scale(.38)"><use href="#cube" style="--t:#f6e7a1;--l:#a9c6ea;--r:#86a9d6"/></g>
+        <g transform="translate(668 184) scale(.32)"><use href="#stack"/></g>
 
         <rect class="glowcard" x="20" y="236" width="680" height="170" rx="12" fill="url(#bn)"/>
         <g opacity=".95">
-          <g transform="translate(560 318) scale(1.15)"><use href="#cube" style="--t:#f6e7a1;--l:#a9c6ea;--r:#86a9d6"/><g transform="matrix(.866 .5 -.866 .5 0 -20)"><text x="0" y="6" text-anchor="middle" font-weight="700" font-size="17" fill="#2b3a55">eg</text></g></g>
+          <g transform="translate(556 345) scale(.95)"><use href="#stack"/></g>
           <g transform="translate(640 278) scale(.7)"><use href="#cube" style="--t:#ffffff;--l:#f2a7b5;--r:#e48c9d"/><g transform="matrix(.866 .5 -.866 .5 0 -20) scale(.82)"><use href="#ico-cursor"/></g></g>
           <g transform="translate(650 368) scale(.6)"><use href="#cube" style="--t:#ffffff;--l:#c8e6d6;--r:#9fd0b7"/><g transform="matrix(.866 .5 -.866 .5 0 -20) scale(.82)"><use href="#ico-chart"/></g></g>
           <g transform="translate(478 372) scale(.5)"><use href="#cube" style="--t:#ffffff;--l:#f6e7a1;--r:#ead27c"/></g>
@@ -477,7 +501,7 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
 
   <div class="out">
     <div><b>One system</b><span>Logo, colour, type and icons all come from the same grid.</span></div>
-    <div><b>A clear signature</b><span>The isometric cube makes it recognisable at any size.</span></div>
+    <div><b>A clear signature</b><span>The stack of tiles makes it recognisable at any size.</span></div>
     <div><b>Ready to reuse</b><span>Templates make new posts and documents quick to produce.</span></div>
   </div>
 </article>
