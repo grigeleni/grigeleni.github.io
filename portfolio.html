@@ -67,6 +67,8 @@ figcaption{font-size:.84rem;color:var(--muted);margin-top:10px}
 .out b{display:block;font-size:.95rem;margin-bottom:2px}
 .out span{font-size:.86rem;color:var(--muted);line-height:1.45;display:block}
 
+#brand g:has(> use[href="#cube"]){filter:drop-shadow(0 7px 7px rgba(43,58,85,.16)) drop-shadow(0 0 10px rgba(255,255,255,.85))}
+#brand .glowcard{filter:drop-shadow(0 10px 18px rgba(134,169,214,.28))}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 6px}
 .gallery figure{margin:0;padding:8px;background:#fff;text-align:center}
 .gallery img{width:100%;height:auto;display:block;border-radius:6px}
@@ -376,9 +378,12 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
   <figure>
     <svg viewBox="0 0 720 250" role="img" aria-label="An isometric cube monogram with the letters eg on its top face, next to the wordmark Eleni Grigoriou">
       <defs>
-        <g id="cube"><path d="M0-40 34.64-20 0 0-34.64-20z" style="fill:var(--t)"/><path d="M-34.64-20 0 0 0 40-34.64 20z" style="fill:var(--l)"/><path d="M0 0 34.64-20 34.64 20 0 40z" style="fill:var(--r)"/></g>
+        <g id="cube"><path d="M0-40 34.64-20 0 0-34.64-20z" style="fill:var(--t)" stroke="#fff" stroke-opacity=".7" stroke-width="1.2" stroke-linejoin="round"/><path d="M-34.64-20 0 0 0 40-34.64 20z" style="fill:var(--l)"/><path d="M0 0 34.64-20 34.64 20 0 40z" style="fill:var(--r)"/></g>
       </defs>
+      <radialGradient id="bub" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#a9c6ea" stop-opacity=".55"/><stop offset="1" stop-color="#a9c6ea" stop-opacity="0"/></radialGradient>
+      <radialGradient id="bub2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f2a7b5" stop-opacity=".4"/><stop offset="1" stop-color="#f2a7b5" stop-opacity="0"/></radialGradient>
       <rect width="720" height="250" rx="10" fill="#fbf8f2"/>
+      <circle cx="140" cy="130" r="120" fill="url(#bub)"/><circle cx="640" cy="60" r="70" fill="url(#bub2)"/><circle cx="560" cy="215" r="34" fill="#a9c6ea" opacity=".25"/><circle cx="610" cy="190" r="12" fill="#a9c6ea" opacity=".3"/><circle cx="40" cy="40" r="10" fill="#f2a7b5" opacity=".3"/>
       <g transform="translate(140 132) scale(2.3)">
         <use href="#cube" style="--t:#f6e7a1;--l:#a9c6ea;--r:#86a9d6"/>
         <g transform="matrix(.866 .5 -.866 .5 0 -20)"><text x="0" y="6" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" font-size="17" fill="#2b3a55" letter-spacing="-.5">eg</text></g>
@@ -425,7 +430,7 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
       <g transform="translate(205 215)"><use href="#cube" style="--t:#ffffff;--l:#f2a7b5;--r:#e48c9d"/><g transform="matrix(.866 .5 -.866 .5 0 -20) scale(.82)"><use href="#ico-bulb"/></g></g>
       <g transform="translate(315 215)"><use href="#cube" style="--t:#ffffff;--l:#f6e7a1;--r:#ead27c"/><g transform="matrix(.866 .5 -.866 .5 0 -20) scale(.82)"><use href="#ico-play"/></g></g>
       <g font-family="Inter,sans-serif">
-        <rect x="430" y="20" width="260" height="260" rx="14" fill="#fbf8f2"/>
+        <rect class="glowcard" x="430" y="20" width="260" height="260" rx="14" fill="#fbf8f2"/>
         <text x="454" y="66" font-family="'Dancing Script',cursive" font-size="26" font-weight="600" fill="#e48c9d">design note</text>
         <text x="454" y="108" font-size="22" font-weight="700" fill="#2b3a55">Three rules for</text>
         <text x="454" y="136" font-size="22" font-weight="700" fill="#2b3a55">interfaces in VR</text>
@@ -455,7 +460,7 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
         <g font-size="11.5" fill="#1c2430"><text x="406" y="124">Geneva, Switzerland</text><text x="406" y="144">grigeleni.github.io</text><text x="406" y="164">linkedin.com/in/eleni-grigoriou98</text></g>
         <g transform="translate(668 176) scale(.38)"><use href="#cube" style="--t:#f6e7a1;--l:#a9c6ea;--r:#86a9d6"/></g>
 
-        <rect x="20" y="236" width="680" height="170" rx="12" fill="url(#bn)"/>
+        <rect class="glowcard" x="20" y="236" width="680" height="170" rx="12" fill="url(#bn)"/>
         <g opacity=".95">
           <g transform="translate(560 318) scale(1.15)"><use href="#cube" style="--t:#f6e7a1;--l:#a9c6ea;--r:#86a9d6"/><g transform="matrix(.866 .5 -.866 .5 0 -20)"><text x="0" y="6" text-anchor="middle" font-weight="700" font-size="17" fill="#2b3a55">eg</text></g></g>
           <g transform="translate(640 278) scale(.7)"><use href="#cube" style="--t:#ffffff;--l:#f2a7b5;--r:#e48c9d"/><g transform="matrix(.866 .5 -.866 .5 0 -20) scale(.82)"><use href="#ico-cursor"/></g></g>
