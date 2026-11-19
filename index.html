@@ -31,7 +31,6 @@ a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 .wrap{max-width:820px;margin:0 auto;padding:0 20px}
 
-/* sticky bar appears after header */
 .bar{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);transform:translateY(-100%);transition:transform .25s ease}
 .bar.show{transform:none}
 .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
@@ -42,7 +41,6 @@ a:hover{text-decoration:underline}
 .bar nav a:hover{text-decoration:none;color:var(--text);background:var(--soft)}
 .bar nav a.on{color:var(--accent);background:var(--accent-soft)}
 
-/* header */
 header{padding:64px 0 28px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
 header img{width:132px;height:132px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 5px var(--accent-soft)}
 h1{font-family:Fraunces,Georgia,serif;font-size:2.4rem;font-weight:600;letter-spacing:-.01em;line-height:1.15;margin:0}
@@ -52,47 +50,27 @@ h1{font-family:Fraunces,Georgia,serif;font-size:2.4rem;font-weight:600;letter-sp
 .btn:hover{text-decoration:none;border-color:#c4ccd7;background:var(--soft)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn.primary:hover{background:#173d60}
-.btn svg{width:16px;height:16px;flex:none}
 
 header{grid-template-columns:auto 1fr 230px}
-.mesh{position:relative;width:230px;height:230px;justify-self:end}
-.mesh canvas{width:100%;height:100%;display:block}
-.mesh figcaption{position:absolute;left:0;right:0;bottom:-4px;text-align:center;font-size:.72rem;color:var(--muted);letter-spacing:.02em}
-.mesh figcaption b{color:var(--accent);font-weight:600}
 
-/* selected work */
 .work{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.work a{position:relative;display:block;padding:18px 18px 16px;border:1px solid var(--line);border-radius:var(--radius);color:var(--text);overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .2s}
-.work a:hover{text-decoration:none;border-color:#c9d6e4;box-shadow:0 8px 22px -14px rgba(43,58,85,.5);transform:translateY(-2px)}
-.work small{display:block;color:var(--accent);font-weight:600;font-size:.78rem;letter-spacing:.06em;margin-bottom:4px}
 .work b{display:block;font-size:1rem;line-height:1.35;margin-bottom:4px}
 .work span{display:block;color:var(--muted);font-size:.9rem}
-.work a.img{padding-right:104px}
 .work a.wide{grid-column:1/-1}
-.work a.img img{position:absolute;right:8px;top:50%;width:92px;height:92px;transform:translateY(-50%)}
 .more{margin:12px 0 0;font-size:.93rem}
 .more a::after{content:" \2192"}
 
-/* key facts */
-.facts{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 0;padding:0;list-style:none}
-.facts li{display:flex;align-items:center;gap:7px;font-size:.88rem;padding:6px 12px;border-radius:999px;background:var(--soft);border:1px solid var(--line)}
-.facts svg{width:15px;height:15px;color:var(--accent)}
 
 .summary{font-size:1.06rem;margin:26px 0 0;color:#2d3746}
 
-/* sections */
 section{padding-top:44px;scroll-margin-top:64px}
 h2{font-family:Fraunces,Georgia,serif;font-size:1.35rem;font-weight:600;letter-spacing:0;margin:0 0 18px;display:flex;align-items:center;gap:10px}
 h2::after{content:"";flex:1;height:1px;background:var(--line)}
 
-/* highlights */
 .hl{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.hl div{padding:18px 18px 16px;border:1px solid var(--line);border-radius:var(--radius);transition:border-color .2s,box-shadow .2s}
-.hl div:hover{border-color:#c9d6e4;box-shadow:0 6px 18px -12px rgba(43,58,85,.4)}
 .hl b{display:block;font-size:1rem;margin-bottom:3px}
 .hl span{color:var(--muted);font-size:.93rem}
 
-/* experience */
 .company{margin-bottom:26px}
 .chead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
 .chead h3{margin:0;font-size:1.08rem}
@@ -117,7 +95,6 @@ details.job ul{margin:2px 0 12px;padding-left:18px;color:#2d3746}
 details.job li{margin-bottom:4px}
 .pill{display:inline-block;font-size:.72rem;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:1px 8px;border-radius:999px;margin-left:8px;vertical-align:2px}
 
-/* education, pubs */
 .item{display:flex;justify-content:space-between;gap:16px;margin-bottom:16px}
 .item h3{margin:0;font-size:1rem}
 .item p{margin:2px 0 0;color:var(--muted);font-size:.93rem}
@@ -128,7 +105,6 @@ details.job li{margin-bottom:4px}
 .pub span{color:var(--muted);font-size:.9rem}
 .pub em{font-style:normal;color:var(--accent);font-size:.85rem;font-weight:500}
 
-/* skills */
 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
 .tabs button{font:600 .9rem Karla,sans-serif;padding:7px 13px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
 .tabs button:hover{color:var(--text)}
@@ -136,7 +112,6 @@ details.job li{margin-bottom:4px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;min-height:40px}
 .tags span{font-size:.88rem;padding:5px 11px;border-radius:7px;background:var(--soft);border:1px solid var(--line)}
 
-/* languages */
 .langs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .lang{padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius)}
 .lang .top{display:flex;justify-content:space-between;align-items:baseline}
@@ -147,7 +122,6 @@ details.job li{margin-bottom:4px}
 .cefr i{height:5px;border-radius:3px;background:var(--line)}
 .cefr i.f{background:var(--accent)}
 
-/* contact */
 .contact{margin:52px 0 30px;padding:30px;border-radius:16px;background:var(--accent);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .contact h2{color:#fff;margin:0 0 4px}
 .contact h2::after{display:none}
@@ -161,18 +135,10 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
 #toast.show{opacity:1;transform:translate(-50%,0)}
 
 
-/* personal brand layer: cream, ink and four pastels */
 :root{--text:#26324a;--muted:#667085;--line:#ebe4d7;--soft:#f5f1e8;--bg:#fbf8f2;--card:#fffdf9;
   --accent:#2B3A55;--accent-soft:#e3edf9;--powder:#A9C6EA;--mint:#C8E6D6;--blush:#F2A7B5;--butter:#F6E7A1}
 ::selection{background:var(--butter)}
 .bar{background:rgba(251,248,242,.92)}
-.work a,.toc a,.hl div,.lang,.out div,.research div,.facts li{background:var(--card)}
-.work a,.toc a{position:relative;overflow:hidden}
-.work a::before,.toc a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c,var(--powder))}
-.work a:nth-child(4n+2),.toc a:nth-child(4n+2){--c:var(--mint)}
-.work a:nth-child(4n+3),.toc a:nth-child(4n+3){--c:var(--blush)}
-.work a:nth-child(4n+4),.toc a:nth-child(4n+4){--c:var(--butter)}
-.work a:hover,.toc a:hover,.hl div:hover{border-color:#ddd3c2;box-shadow:0 10px 24px -16px rgba(43,58,85,.45)}
 header img{box-shadow:0 0 0 5px var(--powder)}
 header .btn:not(.primary){background:var(--card)}
 .btn.primary:hover{background:#1e2a40}
@@ -183,10 +149,26 @@ details.job.cur::before{box-shadow:0 0 0 4px #f8d3db}
 .tags span{background:var(--card)}
 .contact p{color:#d9e2f0}
 
+.mesh{width:190px;height:230px;margin:0;justify-self:end}
+.mesh svg{width:100%;height:100%;display:block;filter:drop-shadow(0 12px 14px rgba(43,58,85,.14))}
+.facts{display:flex;flex-wrap:wrap;gap:4px 22px;margin:4px 0 0;padding:0;list-style:none;color:var(--muted);font-size:.95rem}
+.facts li{position:relative}.facts li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:2px;background:var(--powder);transform:rotate(45deg);margin-right:8px;vertical-align:2px}.facts li:nth-child(2)::before{background:var(--mint)}.facts li:nth-child(3)::before{background:var(--blush)}.facts li:nth-child(4)::before{background:var(--butter)}
+.work{grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.work a{position:relative;display:grid;grid-template-columns:44px 1fr;column-gap:8px;padding:16px 4px;border-bottom:1px solid var(--line);color:var(--text)}
+.work a:nth-child(4n+2){--c:#7fbf9f}.work a:nth-child(4n+3){--c:#d9768b}.work a:nth-child(4n+4){--c:#cfae3f}
+.work a:hover{text-decoration:none}
+.work a:hover b{text-decoration:underline;text-decoration-color:var(--c,#86a9d6);text-decoration-thickness:2px;text-underline-offset:4px}
+.work small{grid-row:span 2;font-family:Fraunces,Georgia,serif;font-size:1.25rem;font-weight:600;color:var(--c,#6f97cc);line-height:1.2}
+.work a.img{padding-right:84px}
+.work a.img img{position:absolute;right:4px;top:50%;width:68px;height:68px;transform:translateY(-50%)}
+.hl{gap:22px 32px}
+.hl div{padding:0 0 0 14px;border-left:3px solid var(--powder)}
+.hl div:nth-child(2){border-color:var(--mint)}.hl div:nth-child(3){border-color:var(--blush)}.hl div:nth-child(4){border-color:var(--butter)}
+.lang{background:var(--card)}
 @media (max-width:640px){
   .wrap{padding:0 16px}
   header{grid-template-columns:1fr;gap:18px;padding-top:40px;position:relative}
-  .mesh{position:absolute;top:24px;right:-10px;width:150px;height:150px;opacity:.75}
+  .mesh{position:absolute;top:24px;right:0;width:110px;height:135px}
   .mesh figcaption{display:none}
   .work{grid-template-columns:1fr}
   header img{width:104px;height:104px}
@@ -229,25 +211,39 @@ details.job.cur::before{box-shadow:0 0 0 4px #f8d3db}
     <h1>Eleni Grigoriou</h1>
     <p class="role">Senior Director of Product Management<br>Geneva, Switzerland</p>
     <div class="btns">
-      <a class="btn primary" href="mailto:grigeleni1998@gmail.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email me</a>
-      <a class="btn" href="https://www.linkedin.com/in/eleni-grigoriou98" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
-      <a class="btn" href="portfolio.html">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Design portfolio</a>
-      <button class="btn" onclick="window.print()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Save as PDF</button>
+      <a class="btn primary" href="mailto:grigeleni1998@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/eleni-grigoriou98" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="portfolio.html">Design portfolio</a>
+      <button class="btn" onclick="window.print()">Save as PDF</button>
     </div>
   </div>
-  <figure class="mesh" aria-hidden="true"><canvas id="mesh" width="460" height="460"></canvas><figcaption><b>Live 3D</b> rendered in your browser</figcaption></figure>
+  <figure class="mesh" aria-hidden="true"><svg viewBox="-60 -110 120 160">
+    <defs>
+      <linearGradient id="hS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".55" stop-color="#fff" stop-opacity=".15"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+      <linearGradient id="hL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3a55" stop-opacity=".02"/><stop offset="1" stop-color="#2b3a55" stop-opacity=".16"/></linearGradient>
+      <linearGradient id="hR" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3a55" stop-opacity=".14"/><stop offset="1" stop-color="#fff" stop-opacity=".22"/></linearGradient>
+      <g id="hT" stroke-linejoin="round">
+        <path d="M-34.64 0 0 20 0 31-34.64 11z" style="fill:var(--l);stroke:var(--l)" stroke-width="5"/>
+        <path d="M0 20 34.64 0 34.64 11 0 31z" style="fill:var(--r);stroke:var(--r)" stroke-width="5"/>
+        <path d="M-34.64 0 0 20 0 31-34.64 11z" fill="url(#hL)"/><path d="M0 20 34.64 0 34.64 11 0 31z" fill="url(#hR)"/>
+        <path d="M0-20 34.64 0 0 20-34.64 0z" style="fill:var(--t);stroke:var(--t)" stroke-width="5"/><path d="M0-20 34.64 0 0 20-34.64 0z" fill="url(#hS)"/>
+        <path d="M-33 .5 0 19.5 33 .5" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1.4" stroke-linecap="round"/>
+      </g>
+    </defs>
+    <use href="#hT" y="0" style="--t:#c9dcf3;--l:#a9c6ea;--r:#86a9d6"/>
+    <use href="#hT" y="-17" style="--t:#dff1e7;--l:#c8e6d6;--r:#9fd0b7"/>
+    <use href="#hT" y="-34" style="--t:#f8d3db;--l:#f2a7b5;--r:#e48c9d"/>
+    <use href="#hT" y="-51" style="--t:#f9efbd;--l:#f6e7a1;--r:#ead27c"/>
+    <g transform="matrix(.866 .5 -.866 .5 0 -51)"><text x="0" y="6" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="18" fill="#2b3a55">eg</text></g>
+  </svg></figure>
 </header>
 
 <ul class="facts">
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>In Geneva since June 2023</li>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2.5"/><path d="M14 9h4M14 13h4M6 17h6"/></svg>Swiss work permit B</li>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>6+ years in product</li>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>MSc Computer Science</li>
-  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h7M7.5 3v2M5.5 5c0 4 3 7 6 8M10 5c-.5 3-3 6.5-6 8M13 21l4-9 4 9M14.5 18h5"/></svg>English C2 · German B1 · learning French</li>
+  <li>In Geneva since June 2023</li>
+  <li>Swiss work permit B</li>
+  <li>6+ years in product</li>
+  <li>MSc Computer Science</li>
+  <li>English C2 · German B1 · learning French</li>
 </ul>
 
 <p class="summary">I lead product management at ORamaVR, a Geneva company that makes training software for surgeons and other clinicians. I joined as an intern in 2020 and worked as a developer and UI/UX designer before moving into product, so I am at home across design, engineering and business. Most of my work has been on B2B software for hospitals and medical training.</p>
@@ -428,39 +424,7 @@ document.getElementById("copy").onclick=async()=>{
   try{await navigator.clipboard.writeText("grigeleni1998@gmail.com");t.textContent="Email copied"}catch(e){t.textContent="grigeleni1998@gmail.com"}
   t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800);
 };
-/* live 3D mesh: icosphere with a heartbeat pulse */
-(function(){
-  const cv=document.getElementById("mesh");if(!cv)return;
-  const ctx=cv.getContext("2d"),W=cv.width,H=cv.height;
-  const t=(1+Math.sqrt(5))/2;
-  let V=[[-1,t,0],[1,t,0],[-1,-t,0],[1,-t,0],[0,-1,t],[0,1,t],[0,-1,-t],[0,1,-t],[t,0,-1],[t,0,1],[-t,0,-1],[-t,0,1]].map(v=>{const l=Math.hypot(...v);return v.map(c=>c/l)});
-  let F=[[0,11,5],[0,5,1],[0,1,7],[0,7,10],[0,10,11],[1,5,9],[5,11,4],[11,10,2],[10,7,6],[7,1,8],[3,9,4],[3,4,2],[3,2,6],[3,6,8],[3,8,9],[4,9,5],[2,4,11],[6,2,10],[8,6,7],[9,8,1]];
-  for(let s=0;s<2;s++){const cache={},NF=[];
-    const mid=(a,b)=>{const k=a<b?a+"_"+b:b+"_"+a;if(cache[k]!=null)return cache[k];const m=V[a].map((c,i)=>(c+V[b][i])/2),l=Math.hypot(...m);V.push(m.map(c=>c/l));return cache[k]=V.length-1};
-    F.forEach(([a,b,c])=>{const ab=mid(a,b),bc=mid(b,c),ca=mid(c,a);NF.push([a,ab,ca],[b,bc,ab],[c,ca,bc],[ab,bc,ca])});F=NF}
-  const E=new Set();F.forEach(([a,b,c])=>[[a,b],[b,c],[c,a]].forEach(([x,y])=>E.add(x<y?x+"_"+y:y+"_"+x)));
-  const edges=[...E].map(k=>k.split("_").map(Number));
-  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let visible=true;new IntersectionObserver(e=>visible=e[0].isIntersecting).observe(cv);
-  function beat(ms){const p=(ms%1100)/1100;return .06*Math.exp(-Math.pow((p-.08)/.035,2))+.035*Math.exp(-Math.pow((p-.26)/.04,2))}
-  function frame(ms){
-    if(visible||reduce){
-      const a=reduce?0.6:ms*0.00025,tilt=0.35,k=1+(reduce?0:beat(ms));
-      const ca=Math.cos(a),sa=Math.sin(a),ct=Math.cos(tilt),st=Math.sin(tilt);
-      const P=V.map(([x,y,z])=>{
-        const bump=1+0.12*Math.sin(3*x+a)*Math.sin(2*y)+0.06*Math.cos(4*z);
-        x*=bump*k;y*=bump*k*1.04;z*=bump*k;
-        let X=x*ca+z*sa,Z=-x*sa+z*ca,Y=y*ct-Z*st;Z=y*st+Z*ct;
-        const s=W*0.82/(2.6-Z*0.6);return [W/2+X*s,H/2+Y*s,Z]});
-      ctx.clearRect(0,0,W,H);
-      for(const [i,j] of edges){const d=(P[i][2]+P[j][2])/2;ctx.strokeStyle=`rgba(43,58,85,${0.07+0.28*(d+1)/2})`;ctx.lineWidth=1.2;
-        ctx.beginPath();ctx.moveTo(P[i][0],P[i][1]);ctx.lineTo(P[j][0],P[j][1]);ctx.stroke()}
-      for(const p of P){const d=(p[2]+1)/2;ctx.fillStyle=`rgba(43,58,85,${0.2+0.6*d})`;ctx.beginPath();ctx.arc(p[0],p[1],1.2+1.8*d,0,7);ctx.fill()}
-    }
-    if(!reduce)requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
-})();
+
 
 addEventListener("beforeprint",()=>document.querySelectorAll("details").forEach(d=>d.open=true));
 </script>
