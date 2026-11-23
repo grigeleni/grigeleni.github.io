@@ -62,6 +62,7 @@ ul.pts li{margin-bottom:4px}
 figure{margin:22px 0 6px;padding:18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--soft)}
 figure svg{display:block;width:100%;height:auto}
 figcaption{font-size:.84rem;color:var(--muted);margin-top:10px}
+.live-mark iframe{display:block;width:100%;height:430px;border:0;background:transparent}
 
 .out{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
 .out div{padding:14px;border-radius:10px;border:1px solid var(--line)}
@@ -70,7 +71,18 @@ figcaption{font-size:.84rem;color:var(--muted);margin-top:10px}
 
 #brand g:has(> use[href="#cube"]),#brand g:has(> use[href="#stack"]){filter:drop-shadow(0 7px 7px rgba(43,58,85,.16)) drop-shadow(0 0 10px rgba(255,255,255,.85))}
 #brand .glowcard{filter:drop-shadow(0 10px 18px rgba(134,169,214,.28))}
+.work{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0 6px}
+.work a{display:block;color:inherit;text-decoration:none;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.work a:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(43,58,85,.1)}
+.work img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.work span{display:block;padding:10px 14px 12px;font-size:.86rem;color:var(--muted)}
+.work span b{display:block;color:var(--text);font-size:.95rem}
+.work .vid{position:relative}
+.work .vid::after{content:"";position:absolute;left:50%;top:38%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(43,58,85,.82) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l8 5-8 5z' fill='%23F6E7A1'/%3E%3C/svg%3E") center/26px no-repeat}
+.draft{background:#fff3b0}
+@media(max-width:640px){.work{grid-template-columns:1fr}}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 6px}
+.gallery.shots{grid-template-columns:repeat(2,1fr)}
 .gallery figure{margin:0;padding:8px;background:#fff;text-align:center}
 .gallery img{width:100%;height:auto;display:block;border-radius:6px}
 .gallery figcaption{margin-top:6px;font-size:.8rem}
@@ -142,8 +154,8 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
 <section class="intro">
   <p class="eyebrow">Design portfolio</p>
   <h1>Designing complex software that people learn by doing</h1>
-  <p class="lead">I spent four years designing the products at ORamaVR, a Geneva company that makes training software for surgeons and other clinicians, before leading its product management. Below are six pieces of work, five that shaped how the products look and behave today and one brand identity of my own. I work in Figma and the Adobe Creative Suite, and I have a computer science background, so I design with engineering from the first sketch.</p>
-  <p class="note">Product screens are covered by client confidentiality, so case studies 01 to 04 use diagrams to describe structure and process. Case study 05 is a brand identity I designed for myself, and 06, from my MSc research, shows the real visuals. I am happy to walk through the real work in a conversation.</p>
+  <p class="lead">I spent four years designing the products at ORamaVR, a Geneva company that makes training software for surgeons and other clinicians, before leading its product management. Below are seven pieces of work, six that shaped how the products look and behave today and one brand identity of my own. I work in Figma and the Adobe Creative Suite, and I have a computer science background, so I design with engineering from the first sketch.</p>
+  <p class="note">Product screens are covered by client confidentiality, so case studies 01 to 04 use diagrams to describe structure and process. Case study 05 is a brand identity I designed for myself, 06, from my MSc research, shows the real visuals, and 07 shows a visual refresh of real product screens. I am happy to walk through the real work in a conversation.</p>
 
   <div class="toc">
     <a href="#vr"><small>01</small><b>VR interaction patterns for surgical training</b></a>
@@ -152,6 +164,8 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
     <a href="#stores"><small>04</small><b>Self-serve stores for a freemium model</b></a>
     <a href="#brand"><small>05</small><b>A personal brand identity</b></a>
     <a href="#patterns"><small>06</small><b>Pattern-driven feedback for XR training</b></a>
+    <a href="#vrui"><small>07</small><b>UI in VR: session analytics, replay and the authoring panel</b></a>
+    <a href="#more"><small>+</small><b>More work: website, dashboards, design proposals and video</b></a>
   </div>
 </section>
 
@@ -439,6 +453,11 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
     <figcaption>The monogram and wordmark. Four pastel tiles stack into one mark, the top tile carries the initials, and the script line adds a personal voice.</figcaption>
   </figure>
 
+  <figure class="live-mark">
+    <iframe src="monogram.html?embed" title="Interactive EG monogram" loading="lazy"></iframe>
+    <figcaption>The same monogram, live. Hover to open the stack, move the pointer to turn it, and click to spin the top tile.</figcaption>
+  </figure>
+
   <figure>
     <svg viewBox="0 0 720 210" role="img" aria-label="Five pastel and ink colour swatches and the two typefaces of the identity">
       <g font-family="Karla,sans-serif">
@@ -559,6 +578,83 @@ footer{color:var(--muted);font-size:.85rem;padding-bottom:40px}
     <div><b>1 day to 2 minutes</b><span>Time to set up the feedback for one step, compared with scripting it by hand.</span></div>
     <div><b>150 lines to 0</b><span>Lines of code an author needs to write.</span></div>
     <div><b>Reusable</b><span>The same feedback profiles work across scenarios.</span></div>
+  </div>
+</article>
+
+<article id="vrui">
+  <span class="num">Case study 07</span>
+  <h2>UI in VR: session analytics, replay and the authoring panel</h2>
+  <ul class="meta">
+    <li class="draft"><b>Role</b> Product designer</li>
+    <li><b>Platform</b> VR headsets and the Unity editor</li>
+    <li><b>Product</b> MAGES SDK</li>
+  </ul>
+
+  <h3>The problem</h3>
+  <p>A trainee finishes a simulated operation with a headset on, so the results have to be read in VR, at arm's length, with a controller instead of a mouse. On the other side, the people who build simulations needed one place inside Unity to set what gets measured, how it is scored and what counts as an error, without writing code for each case.</p>
+
+  <h3>What I did</h3>
+  <ul class="pts">
+    <li>Designed the in-headset session report, with the total score and time always visible and tabs for events, errors, objectives and a per-action report.</li>
+    <li>Used large type, high contrast and a coloured outline and score bar for weak actions, so a trainee sees what to practise again at a glance.</li>
+    <li>Designed the end-of-operation panel with restart and exit, and the replay flow with playback speed for watching a recorded session again.</li>
+    <li>Designed the authoring panel in the Unity editor, from getting started and project analytics to error rules and the AI Assistant that writes code for simulation actions.</li>
+  </ul>
+
+  <h3>In the headset</h3>
+  <div class="gallery shots">
+    <figure><a href="img/vrui-report.webp" target="_blank" rel="noopener"><img src="img/vrui-report.webp" alt="Session overview in VR with total score, tabs and a score per action" loading="lazy" width="1600" height="1000"></a><figcaption><b>Session report</b>Score per action, weak ones outlined</figcaption></figure>
+    <figure><a href="img/vrui-error.webp" target="_blank" rel="noopener"><img src="img/vrui-error.webp" alt="Error list in VR with the details of the selected error" loading="lazy" width="1600" height="1000"></a><figcaption><b>Error details</b>Pick an error to see what went wrong</figcaption></figure>
+    <figure><a href="img/vrui-end.webp" target="_blank" rel="noopener"><img src="img/vrui-end.webp" alt="End of operation panel in VR with the event list, restart and exit" loading="lazy" width="1600" height="1000"></a><figcaption><b>End of operation</b>Review, then restart or exit</figcaption></figure>
+    <figure><a href="img/vrui-replay.webp" target="_blank" rel="noopener"><img src="img/vrui-replay.webp" alt="Recording list in VR with a replay button" loading="lazy" width="1600" height="1000"></a><figcaption><b>Replay</b>Watch a recorded session again</figcaption></figure>
+  </div>
+
+  <h3>In the Unity editor</h3>
+  <div class="gallery shots">
+    <figure><a href="img/panel-start.webp" target="_blank" rel="noopener"><img src="img/panel-start.webp" alt="MAGES panel getting started page in the Unity editor" loading="lazy" width="1600" height="1000"></a><figcaption><b>Getting started</b>First steps for a new project</figcaption></figure>
+    <figure><a href="img/panel-jaria.webp" target="_blank" rel="noopener"><img src="img/panel-jaria.webp" alt="The AI Assistant answering with code for a tool action" loading="lazy" width="1600" height="1000"></a><figcaption><b>AI Assistant</b>Writes the code for simulation actions</figcaption></figure>
+    <figure><a href="img/panel-objectives.webp" target="_blank" rel="noopener"><img src="img/panel-objectives.webp" alt="Project analytics, choosing an objective type" loading="lazy" width="1600" height="1000"></a><figcaption><b>Objectives</b>Set what the trainee must achieve</figcaption></figure>
+    <figure><a href="img/panel-errors.webp" target="_blank" rel="noopener"><img src="img/panel-errors.webp" alt="Adding a new error rule for an action" loading="lazy" width="1600" height="1000"></a><figcaption><b>Error rules</b>Define errors without writing code</figcaption></figure>
+  </div>
+  <p style="font-size:.84rem;color:var(--muted)">A 2026 visual refresh of the shipped screens, redrawn for this portfolio with example data. The layout and flows are the ones in the product.</p>
+
+  <div class="out">
+    <div><b>Readable in VR</b><span>Large type and colour cues work at headset distance.</span></div>
+    <div><b>No code</b><span>Authors set scoring, objectives and errors in the panel.</span></div>
+    <div><b>AI built in</b><span>The AI Assistant answers questions and writes action code inside Unity.</span></div>
+  </div>
+</article>
+
+<article id="more">
+  <span class="num">More work</span>
+  <h2>Website, dashboards, design proposals and video</h2>
+  <p>Alongside the products I design and build the company website, set up the reporting the team uses every week, prototype interfaces with Claude and produce video for our channels. Most of these pieces are public, so you can open them as they are.</p>
+
+  <h3>The company website</h3>
+  <div class="work">
+    <a href="https://oramavr.com/" target="_blank" rel="noopener"><img src="img/work-web-home.webp" alt="The oramavr.com homepage" loading="lazy" width="1200" height="750"><span><b>oramavr.com</b>Designed, built and maintained in HTML, CSS and JavaScript</span></a>
+    <a href="https://oramavr.com/vtc" target="_blank" rel="noopener"><img src="img/work-web-vtc.webp" alt="The Virtual Training Center product page" loading="lazy" width="1200" height="750"><span><b>Product pages</b>One page per product, written and designed for clinical buyers</span></a>
+    <a href="https://oramavr.com/vtc-pricing" target="_blank" rel="noopener"><img src="img/work-web-pricing.webp" alt="The VTC pricing guide with a currency switch" loading="lazy" width="1200" height="750"><span><b>Pricing guide</b>Interactive prices in three currencies for the 2026 pricing launch</span></a>
+  </div>
+
+  <h3>Reporting dashboards</h3>
+  <div class="work">
+    <a href="img/work-dashboard.webp" target="_blank" rel="noopener"><img src="img/work-dashboard.webp" alt="A website traffic dashboard with sessions, sources and channels, shown with demo data" loading="lazy" width="1200" height="658"><span><b>Website traffic dashboard</b>Fed by a daily Google Analytics 4 export I automated in Python. Shown with demo data.</span></a>
+    <a href="https://oramavr.com/sim-publisher-revenue?price=2000&amp;inst=100&amp;growth=25&amp;sub=150000" target="_blank" rel="noopener"><img src="img/work-publisher.webp" alt="An interactive revenue calculator for simulation publishers, with a yearly chart" loading="lazy" width="1200" height="750"><span><b>Publisher revenue calculator</b>Interactive page where partners see what publishing a simulation could earn them, and when it covers their own subscription</span></a>
+  </div>
+
+  <h3>Design proposals built with Claude</h3>
+  <p>I use Claude artifacts to turn a design idea into an interactive proposal the team can click through: real states, before and after views, and the exact colours and sizes engineering needs to build it. Both proposals below are for VR training screens.</p>
+  <div class="work">
+    <a href="img/claude-monitor.webp" target="_blank" rel="noopener"><img src="img/claude-monitor.webp" alt="Before and after of an in-headset operation progress panel" loading="lazy" width="1600" height="1000"><span><b>Action monitor refresh</b>Before and after of the in-headset progress panel, with every state and the build tokens</span></a>
+    <a href="img/claude-vrkit-1.webp" target="_blank" rel="noopener"><img src="img/claude-vrkit-1.webp" alt="Welcome menu and patient position choice for a VR positioning course" loading="lazy" width="1600" height="1000"><span><b>Patient positioning UI kit</b>Eleven VR screens in English and German, from the welcome menu to the AI Assistant chat</span></a>
+    <a href="img/claude-vrkit-2.webp" target="_blank" rel="noopener"><img src="img/claude-vrkit-2.webp" alt="Patient checklist and a multiple-choice question in VR" loading="lazy" width="1600" height="1000"><span><b>Checklists and questions</b>Interactive states for the patient check and the in-headset quiz</span></a>
+  </div>
+
+  <h3>Video</h3>
+  <div class="work draft">
+    <a class="vid" href="https://www.youtube.com/watch?v=zusPx0gyXUE" target="_blank" rel="noopener"><img src="img/work-yt-zusPx0gyXUE.webp" alt="ORamaVR in 30 seconds, video thumbnail" loading="lazy" width="480" height="360"><span><b>ORamaVR in 30 seconds</b>Company video on YouTube</span></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=CRpzf1ODJro" target="_blank" rel="noopener"><img src="img/work-yt-CRpzf1ODJro.webp" alt="Medical VR powered by MAGES, video thumbnail" loading="lazy" width="480" height="360"><span><b>Medical VR powered by MAGES</b>Platform video on YouTube</span></a>
   </div>
 </article>
 
