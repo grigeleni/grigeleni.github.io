@@ -20,6 +20,9 @@ svg:focus-visible{outline:2px dashed #a9c6ea;outline-offset:6px;border-radius:24
 .hint.gone{opacity:0}
 .embed body{background:transparent}
 .embed .stage{width:min(420px,92vw,74vh);margin-top:6vh}
+.mini .hint{display:none}
+.mini .stage{width:min(92vw,70vh);margin-top:10vh}
+.mini .stage::before{display:none}
 </style>
 </head>
 <body>
@@ -45,6 +48,7 @@ svg:focus-visible{outline:2px dashed #a9c6ea;outline-offset:6px;border-radius:24
 <script>
 (() => {
   if (/[?&]embed\b/.test(location.search)) document.documentElement.classList.add('embed');
+  if (/[?&]mini\b/.test(location.search)) document.documentElement.classList.add('mini');
   const NS = 'http://www.w3.org/2000/svg';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const S = 2.35;                 // scale of the drawing

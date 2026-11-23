@@ -150,7 +150,7 @@ details.job.cur::before{box-shadow:0 0 0 4px #f8d3db}
 .contact p{color:#d9e2f0}
 
 .mesh{width:190px;height:230px;margin:0;justify-self:end}
-.mesh svg{width:100%;height:100%;display:block;filter:drop-shadow(0 12px 14px rgba(43,58,85,.14))}
+.mesh iframe{width:100%;height:100%;display:block;border:0;background:transparent}
 .facts{display:flex;flex-wrap:wrap;gap:4px 22px;margin:4px 0 0;padding:0;list-style:none;color:var(--muted);font-size:.95rem}
 .facts li{position:relative}.facts li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:2px;background:var(--powder);transform:rotate(45deg);margin-right:8px;vertical-align:2px}.facts li:nth-child(2)::before{background:var(--mint)}.facts li:nth-child(3)::before{background:var(--blush)}.facts li:nth-child(4)::before{background:var(--butter)}
 .work{grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
@@ -160,7 +160,7 @@ details.job.cur::before{box-shadow:0 0 0 4px #f8d3db}
 .work a:hover b{text-decoration:underline;text-decoration-color:var(--c,#86a9d6);text-decoration-thickness:2px;text-underline-offset:4px}
 .work small{grid-row:span 2;font-family:Fraunces,Georgia,serif;font-size:1.25rem;font-weight:600;color:var(--c,#6f97cc);line-height:1.2}
 .work a.img{padding-right:84px}
-.work a.img img{position:absolute;right:4px;top:50%;width:68px;height:68px;transform:translateY(-50%)}
+.work a.img img{position:absolute;right:4px;top:50%;width:68px;height:68px;transform:translateY(-50%);object-fit:cover;border-radius:8px}
 .hl{gap:22px 32px}
 .hl div{padding:0 0 0 14px;border-left:3px solid var(--powder)}
 .hl div:nth-child(2){border-color:var(--mint)}.hl div:nth-child(3){border-color:var(--blush)}.hl div:nth-child(4){border-color:var(--butter)}
@@ -218,25 +218,7 @@ details.job.cur::before{box-shadow:0 0 0 4px #f8d3db}
       <button class="btn" onclick="window.print()">Save as PDF</button>
     </div>
   </div>
-  <figure class="mesh" aria-hidden="true"><svg viewBox="-60 -110 120 160">
-    <defs>
-      <linearGradient id="hS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".55" stop-color="#fff" stop-opacity=".15"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-      <linearGradient id="hL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3a55" stop-opacity=".02"/><stop offset="1" stop-color="#2b3a55" stop-opacity=".16"/></linearGradient>
-      <linearGradient id="hR" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2b3a55" stop-opacity=".14"/><stop offset="1" stop-color="#fff" stop-opacity=".22"/></linearGradient>
-      <g id="hT" stroke-linejoin="round">
-        <path d="M-34.64 0 0 20 0 31-34.64 11z" style="fill:var(--l);stroke:var(--l)" stroke-width="5"/>
-        <path d="M0 20 34.64 0 34.64 11 0 31z" style="fill:var(--r);stroke:var(--r)" stroke-width="5"/>
-        <path d="M-34.64 0 0 20 0 31-34.64 11z" fill="url(#hL)"/><path d="M0 20 34.64 0 34.64 11 0 31z" fill="url(#hR)"/>
-        <path d="M0-20 34.64 0 0 20-34.64 0z" style="fill:var(--t);stroke:var(--t)" stroke-width="5"/><path d="M0-20 34.64 0 0 20-34.64 0z" fill="url(#hS)"/>
-        <path d="M-33 .5 0 19.5 33 .5" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1.4" stroke-linecap="round"/>
-      </g>
-    </defs>
-    <use href="#hT" y="0" style="--t:#c9dcf3;--l:#a9c6ea;--r:#86a9d6"/>
-    <use href="#hT" y="-17" style="--t:#dff1e7;--l:#c8e6d6;--r:#9fd0b7"/>
-    <use href="#hT" y="-34" style="--t:#f8d3db;--l:#f2a7b5;--r:#e48c9d"/>
-    <use href="#hT" y="-51" style="--t:#f9efbd;--l:#f6e7a1;--r:#ead27c"/>
-    <g transform="matrix(.866 .5 -.866 .5 0 -51)"><text x="0" y="6" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="18" fill="#2b3a55">eg</text></g>
-  </svg></figure>
+  <figure class="mesh"><iframe src="monogram.html?embed&amp;mini" title="Animated EG monogram: hover to open the stack, click to spin it" loading="lazy"></iframe></figure>
 </header>
 
 <ul class="facts">
@@ -258,6 +240,8 @@ details.job.cur::before{box-shadow:0 0 0 4px #f8d3db}
     <a href="portfolio.html#stores"><small>04</small><b>Self-serve stores for a freemium model</b><span>From a free sign-up to a paid subscription, with no sales call.</span></a>
     <a href="portfolio.html#brand"><small>05</small><b>A personal brand identity</b><span>Monogram, colour, type, icons and templates built on one isometric grid.</span></a>
     <a href="portfolio.html#patterns" class="img"><img src="img/pattern-insert.webp" alt="" width="520" height="520" loading="lazy"><small>06</small><b>Pattern-driven feedback for XR training</b><span>MSc research that cut setup from a day to two minutes.</span></a>
+    <a href="portfolio.html#vrui" class="img"><img src="img/vrui-report.webp" alt="" width="1600" height="1000" loading="lazy"><small>07</small><b>UI in VR: session analytics, replay and the authoring panel</b><span>In-headset results for trainees and a no-code panel for authors, with an AI Assistant.</span></a>
+    <a href="portfolio.html#more"><small>+</small><b>More work: website, dashboards, design proposals and video</b><span>The company website, a revenue calculator, design proposals built with Claude and video.</span></a>
   </div>
   <p class="more"><a href="portfolio.html">See the full design portfolio</a></p>
 </section>
@@ -298,8 +282,6 @@ details.job.cur::before{box-shadow:0 0 0 4px #f8d3db}
           <li>Designed two self-serve online stores on the customer portal, for the authoring tool and the virtual training centre, a freemium model where users start free and upgrade to monthly or annual credit-card subscriptions without a sales call</li>
           <li>Designed the partner and reseller model for the virtual training centre, with multi-tenant administration, licence pools, sub-tenants and audit views, a partner guide and a public <a href="https://oramavr.com/partner-earnings" target="_blank" rel="noopener">revenue-share calculator</a></li>
           <li>Report to leadership through KPI dashboards and OKR status updates</li>
-          <li class="draft">Co-authored an open data schema for procedural competency data from simulated training, with an xAPI and cmi5 binding, a reference implementation and conformance tests</li>
-          <li class="draft">Product work on the AI features of the platform, including AI assessment of trainee performance and a generative AI authoring engine</li>
           <li>Introduced AI agents for product operations, including a company knowledge base that AI keeps up to date</li>
         </ul>
       </details>
